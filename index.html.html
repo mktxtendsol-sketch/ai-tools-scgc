@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศูนย์รวมเครื่องมือ AI | AILY Lab - SCGC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --aily-purple: #9D4EDD;
+            --aily-cyan: #00F5FF;
+            --aily-pink: #FF006E;
+            --aily-blue: #3A86FF;
+            --aily-dark: #1a1a2e;
+            --aily-darker: #0f0f1e;
+            --text-primary: #f8f9fa;
+            --text-secondary: #b8b9ba;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(157, 78, 221, 0.3);
+            --shadow: 0 8px 32px rgba(157, 78, 221, 0.2);
+            --shadow-hover: 0 12px 48px rgba(157, 78, 221, 0.4);
+            --glow: 0 0 20px rgba(0, 245, 255, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            background: linear-gradient(135deg, var(--aily-darker) 0%, #1a1a2e 50%, #2a1a3e 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(157, 78, 221, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 0, 110, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(157, 78, 221, 0.2) 0%, rgba(58, 134, 255, 0.2) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid var(--card-border);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .aily-character {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-cyan));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: var(--glow);
+            animation: float 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        .aily-character::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            filter: blur(10px);
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0;
+            background: linear-gradient(135deg, var(--aily-cyan), var(--aily-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--aily-cyan);
+            font-weight: 400;
+            margin-top: 0.25rem;
+        }
+
+        .aily-lab-badge {
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-pink));
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: var(--glow);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .back-home-link {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--aily-cyan);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-home-link:hover {
+            background: rgba(0, 245, 255, 0.2);
+            transform: translateX(-4px);
+            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.4);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(157, 78, 221, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .stat:hover::before {
+            left: 100%;
+        }
+
+        .stat:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--aily-cyan);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, var(--aily-cyan), var(--aily-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .banner {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(157, 78, 221, 0.2), rgba(58, 134, 255, 0.2));
+            border: 2px solid var(--card-border);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: '🤖';
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 8rem;
+            opacity: 0.1;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--aily-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .banner-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-cyan));
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            box-shadow: var(--glow);
+            transition: all 0.3s ease;
+        }
+
+        .banner-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 245, 255, 0.5);
+        }
+
+        .controls {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 20px;
+            position: sticky;
+            top: 140px;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .search-container {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--card-border);
+            border-radius: 15px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--aily-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .search-box::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--card-border);
+            color: var(--text-primary);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(157, 78, 221, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .filter-btn:hover::before {
+            width: 200%;
+            height: 200%;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--aily-cyan);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-cyan));
+            border-color: var(--aily-cyan);
+            box-shadow: var(--glow);
+        }
+
+        .category {
+            margin: 3rem 0;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(157, 78, 221, 0.1), rgba(58, 134, 255, 0.1));
+            border-left: 4px solid var(--aily-cyan);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--aily-cyan), white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .category-count {
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-pink));
+            color: white;
+            padding: 0.35rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            box-shadow: 0 0 15px rgba(157, 78, 221, 0.5);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--aily-purple), var(--aily-cyan), var(--aily-pink));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--aily-cyan);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .tool-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .tool-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tool-badge {
+            padding: 0.35rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .badge-free {
+            background: linear-gradient(135deg, #00ff87, #00d4ff);
+            color: #0a0a0a;
+        }
+
+        .badge-freemium {
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            color: #0a0a0a;
+        }
+
+        .badge-paid {
+            background: linear-gradient(135deg, #ff006e, #ff4d9f);
+            color: white;
+        }
+
+        .badge-chinese {
+            background: linear-gradient(135deg, #ff3366, #ff6b9d);
+            color: white;
+        }
+
+        .badge-hot {
+            background: linear-gradient(135deg, var(--aily-cyan), var(--aily-purple));
+            color: white;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .tool-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .tool-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .feature-tag {
+            background: rgba(157, 78, 221, 0.2);
+            border: 1px solid rgba(157, 78, 221, 0.4);
+            padding: 0.4rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--aily-cyan);
+            font-weight: 500;
+        }
+
+        .tool-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tool-pricing {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .pricing-amount {
+            font-weight: 700;
+            color: var(--aily-cyan);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .tool-link {
+            padding: 0.65rem 1.5rem;
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-cyan));
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+        }
+
+        .tool-link:hover {
+            transform: translateX(4px);
+            box-shadow: 0 6px 25px rgba(0, 245, 255, 0.5);
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(157, 78, 221, 0.3), rgba(58, 134, 255, 0.3));
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--aily-cyan);
+            padding: 2.5rem;
+            border-radius: 24px;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-hover);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::before {
+            content: '⭐';
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            font-size: 10rem;
+            opacity: 0.05;
+        }
+
+        .highlight-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--aily-cyan);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+        }
+
+        .highlight-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .highlight-item {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.75rem;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--aily-cyan);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+        }
+
+        .highlight-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+
+        .highlight-item p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .comparison-table {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow);
+            overflow-x: auto;
+        }
+
+        .comparison-table h3 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: var(--aily-cyan);
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-blue));
+            color: white;
+            padding: 1.25rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        th:first-child {
+            border-top-left-radius: 12px;
+        }
+
+        th:last-child {
+            border-top-right-radius: 12px;
+        }
+
+        td {
+            padding: 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+        }
+
+        tr:hover td {
+            background: rgba(157, 78, 221, 0.05);
+            color: var(--text-primary);
+        }
+
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 12px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 12px;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border-top: 2px solid var(--card-border);
+            padding: 3rem 0 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1.25rem;
+            color: var(--aily-cyan);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--aily-cyan);
+            padding-left: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-cyan));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 5rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .no-results-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.3;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, var(--aily-purple), var(--aily-cyan));
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--glow);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 35px rgba(0, 245, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .stats {
+                gap: 1rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                top: 120px;
+            }
+
+            .filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .filter-btn {
+                flex: 1;
+                text-align: center;
+            }
+
+            .highlight-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(157, 78, 221, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(157, 78, 221, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="aily-character">🤖</div>
+                    <div>
+                        <h1>⚡ AILY LAB - ศูนย์รวมเครื่องมือ AI</h1>
+                        <p class="subtitle">ศูนย์รวมเครื่องมือ AI ครบวงจร | AI Adoption & Self Service Team</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                    <a href="https://scgo365.sharepoint.com/sites/AILYAraiNa" target="_blank" class="back-home-link">
+                        ← กลับหน้าหลัก AILY Arai Na
+                    </a>
+                    <div class="aily-lab-badge">
+                        💎 FOR SCGC ONLY
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">350+</div>
+                    <div class="stat-label">AI Tools</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">หมวดหมู่</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">เครื่องมือฟรี</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">AI จีน</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- AILY Lab Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <div class="banner-title">🚀 อยากลองใช้ CHAT MODEL ตัวใหม่ๆ?</div>
+                <p style="color: var(--text-secondary); margin: 0.5rem 0;">
+                    <strong style="color: var(--aily-cyan);">AILY LAB</strong> - AI ตัว Top ของชาว SCGC ONLY !! 
+                    <br>Extremely exclusive for SCGC only !!
+                </p>
+                <a href="https://scgc-ailylab.scg.com/" target="_blank" class="banner-link">
+                    ✨ เข้าใช้ AILY Lab เลย ! →
+                </a>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-box" id="searchBox" placeholder="ค้นหาเครื่องมือ AI (เช่น ChatGPT, Midjourney, สร้างภาพ, แปลง PDF...)">
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-price="all">🌟 ทั้งหมด</button>
+                    <button class="filter-btn" data-price="free">🆓 ฟรี</button>
+                    <button class="filter-btn" data-price="freemium">💎 Freemium</button>
+                    <button class="filter-btn" data-price="paid">💰 Paid</button>
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn" data-region="global">🌐 สากล</button>
+                    <button class="filter-btn" data-region="chinese">🇨🇳 จีน</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Highlight Section -->
+        <div class="highlight-card">
+            <div class="highlight-title">
+                ⭐ AI เด่นๆ ที่น่าใช้
+            </div>
+            <div class="highlight-content">
+                <div class="highlight-item">
+                    <h4>🍌 Nanobanana & Pro</h4>
+                    <p>แก้ไขภาพด้วย AI จาก Google ที่รักษาใบหน้าและฉากเดิมได้เยี่ยม - ดีกว่า Flux Kontext!</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>🎬 Google Flow</h4>
+                    <p>ทำหนังด้วย AI! ใช้ Veo 3.1 สร้างวิดีโอคุณภาพสูงพร้อมเสียง - เหมาะสำหรับ Content Creator</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>🇨🇳 Chinese AI Boom</h4>
+                    <p>DeepSeek, Qwen, Kimi, Doubao - AI จีนที่มีคุณภาพเทียบเท่าสากลแต่ราคาถูกกว่าครึ่ง!</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>📊 Codia AI NoteSlide</h4>
+                    <p>แปลง NotebookLM PDF เป็น PowerPoint ที่แก้ไขได้ใน 10 วินาที - เหมาะสำหรับนำเสนอ!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools by Category -->
+        <div id="toolsContainer"></div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-table">
+            <h3>📊 เปรียบเทียบ Top AI Chatbots</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ฟีเจอร์</th>
+                        <th>ChatGPT Plus</th>
+                        <th>Claude Pro</th>
+                        <th>Gemini Advanced</th>
+                        <th>DeepSeek (จีน)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ราคา</strong></td>
+                        <td>$20/เดือน</td>
+                        <td>$20/เดือน</td>
+                        <td>$20/เดือน</td>
+                        <td><span style="color: var(--aily-cyan);">🆓 ฟรี</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>โมเดล</strong></td>
+                        <td>GPT-4o</td>
+                        <td>Sonnet 3.7</td>
+                        <td>Gemini 1.5 Pro</td>
+                        <td>DeepSeek-R1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>จุดแข็ง</strong></td>
+                        <td>ครบเครื่อง, DALL-E</td>
+                        <td>วิเคราะห์ลึก, โค้ด</td>
+                        <td>Nanobanana, Flow</td>
+                        <td>Reasoning, ราคาถูก</td>
+                    </tr>
+                    <tr>
+                        <td><strong>บริบท</strong></td>
+                        <td>128K tokens</td>
+                        <td>200K tokens</td>
+                        <td>1M tokens</td>
+                        <td>64K tokens</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="comparison-table">
+            <h3>🎯 แนะนำตามกลุ่มผู้ใช้</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>กลุ่มผู้ใช้</th>
+                        <th>แนะนำ (ฟรี)</th>
+                        <th>แนะนำ (จ่าย)</th>
+                        <th>เหมาะสำหรับ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Executives</strong></td>
+                        <td>Perplexity, Claude</td>
+                        <td>Perplexity Pro, Gamma</td>
+                        <td>วิจัยเร็ว, วิเคราะห์, นำเสนอ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Leaders</strong></td>
+                        <td>Notion AI, Otter.ai</td>
+                        <td>Motion, Fireflies.ai</td>
+                        <td>จัดการงาน, ประชุม, บริหารเวลา</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Champions</strong></td>
+                        <td>Cursor, Claude</td>
+                        <td>Midjourney, Google Flow</td>
+                        <td>โค้ด, creative, วิดีโอ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Citizens</strong></td>
+                        <td>ChatGPT, Canva, Nanobanana</td>
+                        <td>ChatGPT Plus, Canva Pro</td>
+                        <td>เริ่มต้น, ออกแบบ, แก้ไขภาพ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🎓 แหล่งเรียนรู้</h4>
+                    <ul>
+                        <li><a href="https://deeplearning.ai" target="_blank">DeepLearning.AI</a></li>
+                        <li><a href="https://coursera.org" target="_blank">Coursera AI Courses</a></li>
+                        <li><a href="https://fast.ai" target="_blank">Fast.ai</a></li>
+                        <li><a href="https://ai.google/education" target="_blank">Google AI Education</a></li>
+                        <li>AILY World Manual (Internal)</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>🔐 ความปลอดภัยของข้อมูล</h4>
+                    <ul>
+                        <li><strong style="color: var(--aily-cyan);">ข้อมูลสาธารณะ:</strong> ใช้ทุกเครื่องมือได้</li>
+                        <li><strong style="color: var(--aily-cyan);">ข้อมูลภายใน:</strong> AILY, Copilot M365, GiNii</li>
+                        <li><strong style="color: var(--aily-cyan);">ข้อมูลลับ:</strong> เครื่องมือภายในเท่านั้น</li>
+                        <li><strong style="color: var(--aily-cyan);">ข้อมูลลับสุดยอด:</strong> ปรึกษาทีม IT/Security</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>📞 หน่วยงาน</h4>
+                    <ul>
+                        <li><strong style="color: white;">AI Adoption & Self Service</strong></li>
+                        <li>Enterprise Digital and AI</li>
+                        <li style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">สำหรับพนักงาน SCGC</li>
+                        <li style="color: var(--aily-cyan); font-weight: 600;">Version 1.0 - Feb 2025</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025 SCG Chemicals (SCGC) - AI Adoption & Self Service, Enterprise Digital and AI | 
+                <span style="color: var(--aily-cyan);">สำหรับใช้ภายในองค์กร</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <script>
+        // AI Tools Data - Same as before
+        const aiTools = {
+            "chat": {
+                title: "สนทนาและเขียนข้อความ",
+                icon: "💬",
+                tools: [
+                    {
+                        name: "ChatGPT",
+                        description: "AI chatbot ที่หลากหลาย เขียนโค้ดเก่ง Browse web ได้",
+                        features: ["GPT-4o", "DALL-E 3", "Browse web", "Voice mode"],
+                        pricing: "ฟรี / $20/เดือน",
+                        link: "https://chatgpt.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Claude",
+                        description: "วิเคราะห์เชิงลึก บริบท 200K tokens ใช้ Artifacts ได้",
+                        features: ["Sonnet 3.7", "200K context", "Artifacts", "วิเคราะห์ลึก"],
+                        pricing: "ฟรี / $20/เดือน",
+                        link: "https://claude.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Gemini",
+                        description: "ผสาน Google บริบท 1M tokens มี Nanobanana และ Flow",
+                        features: ["Gemini 1.5 Pro", "1M context", "Nanobanana", "Flow"],
+                        pricing: "ฟรี / $20/เดือน",
+                        link: "https://gemini.google.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "DeepSeek",
+                        description: "⚡ AI จีน Reasoning เก่ง MoE ราคาถูก คุณภาพเทียบ GPT-4o",
+                        features: ["DeepSeek-R1", "MoE", "Reasoning", "ฟรีทั้งหมด"],
+                        pricing: "🆓 ฟรี",
+                        link: "https://chat.deepseek.com",
+                        type: "free",
+                        region: "chinese",
+                        hot: true
+                    },
+                    {
+                        name: "Qwen (通义千问)",
+                        description: "Alibaba AI ทรงพลัง Qwen 2.5-Max แข่งกับ GPT-4o",
+                        features: ["Qwen 2.5-Max", "Multi-modal", "MoE", "Alibaba"],
+                        pricing: "🆓 ฟรี / มี Pro",
+                        link: "https://tongyi.aliyun.com",
+                        type: "freemium",
+                        region: "chinese",
+                        hot: true
+                    },
+                    {
+                        name: "Kimi",
+                        description: "Moonshot AI บริบท 2M tokens อ่านเอกสารยาวได้",
+                        features: ["2M context", "อ่านหนังสือทั้งเล่ม", "ฟรีใช้งาน"],
+                        pricing: "🆓 ฟรี",
+                        link: "https://kimi.moonshot.cn",
+                        type: "free",
+                        region: "chinese",
+                        hot: false
+                    },
+                    {
+                        name: "Doubao (豆包)",
+                        description: "ByteDance (TikTok) 1.5 Pro ราคาถูกกว่าครึ่ง",
+                        features: ["Doubao 1.5 Pro", "Multi-modal", "ราคาถูก", "ByteDance"],
+                        pricing: "🆓 ฟรี",
+                        link: "https://doubao.com",
+                        type: "free",
+                        region: "chinese",
+                        hot: false
+                    },
+                    {
+                        name: "Perplexity AI",
+                        description: "ค้นหาเว็บเรียลไทม์ มีอ้างอิง เหมาะสำหรับวิจัย",
+                        features: ["Real-time search", "Citations", "Research mode"],
+                        pricing: "ฟรี 5 Pro/วัน / $20/เดือน",
+                        link: "https://www.perplexity.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Jasper",
+                        description: "เขียนคัดลอกการตลาด แบรนด์ดิ้ง สำหรับธุรกิจ",
+                        features: ["Marketing copy", "Brand voice", "Templates", "Team"],
+                        pricing: "$49-125/เดือน",
+                        link: "https://jasper.ai",
+                        type: "paid",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Grammarly",
+                        description: "ตรวจแก้ไขภาษาอังกฤษ เขียนได้ดีขึ้น",
+                        features: ["Grammar check", "Tone", "Clarity", "Writing assistant"],
+                        pricing: "ฟรี / $12/เดือน",
+                        link: "https://grammarly.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    }
+                ]
+            },
+            "image": {
+                title: "สร้างและแก้ไขภาพ",
+                icon: "🎨",
+                tools: [
+                    {
+                        name: "Nanobanana",
+                        description: "⭐ Google Gemini 2.5 Flash - แก้ไขภาพด้วยข้อความ รักษาใบหน้าเดิม ดีกว่า Flux Kontext",
+                        features: ["Character Consistency", "Scene Preservation", "Text in Image", "Multi-step"],
+                        pricing: "🆓 ฟรี (Gemini)",
+                        link: "https://gemini.google.com",
+                        type: "free",
+                        region: "global",
+                        hot: true
+                    },
+                    {
+                        name: "Nanobanana Pro",
+                        description: "⭐ Gemini 3 Pro Image - แก้ไขขั้นสูง ความละเอียด 4K ข้อความชัดเจน",
+                        features: ["4K resolution", "Sharp text", "Professional editing", "Advanced control"],
+                        pricing: "$20/เดือน (Gemini Advanced)",
+                        link: "https://gemini.google.com",
+                        type: "paid",
+                        region: "global",
+                        hot: true
+                    },
+                    {
+                        name: "Midjourney",
+                        description: "มาตรฐานอุตสาหกรรม คุณภาพศิลปะสูง เหมาะสำหรับงาน creative",
+                        features: ["Art quality", "Consistent style", "Discord-based", "v6.1"],
+                        pricing: "$10-120/เดือน",
+                        link: "https://midjourney.com",
+                        type: "paid",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "DALL-E 3",
+                        description: "จาก OpenAI สร้างภาพสร้างสรรค์ ผสานกับ ChatGPT",
+                        features: ["OpenAI", "Creative", "Text understanding", "GPT integration"],
+                        pricing: "$20/เดือน (ChatGPT Plus)",
+                        link: "https://openai.com/dall-e-3",
+                        type: "paid",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Leonardo.ai",
+                        description: "สร้างภาพเกม ศิลปะ Realtime canvas ใช้งานง่าย",
+                        features: ["Game assets", "Realtime canvas", "Consistent characters"],
+                        pricing: "150 tokens/วัน ฟรี / $12/เดือน",
+                        link: "https://app.leonardo.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Playground AI",
+                        description: "สร้างภาพหลากหลายสไตล์ Canvas editor ปรับแต่งได้",
+                        features: ["Multiple models", "Canvas editor", "Fine controls"],
+                        pricing: "50 รูป/วัน ฟรี / $15/เดือน",
+                        link: "https://playground.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Ideogram",
+                        description: "สร้างข้อความในรูปชัดเจน เหมาะสำหรับโปสเตอร์",
+                        features: ["Text in images", "Typography", "Posters", "Magic Prompt"],
+                        pricing: "100 รูป/เดือน ฟรี / $8/เดือน",
+                        link: "https://ideogram.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Varoriya",
+                        description: "แพลตฟอร์มไทย รองรับ prompt ภาษาไทย สไตล์ศิลปะไทย",
+                        features: ["Thai platform", "Thai prompts", "Thai art styles"],
+                        pricing: "ฟรีจำกัด / มี Pro",
+                        link: "https://varoriya.com/th",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Remove.bg",
+                        description: "ลบพื้นหลังภาพอัตโนมัติ เร็วและแม่นยำ",
+                        features: ["Auto background removal", "HD output", "API"],
+                        pricing: "1 HD/เดือน ฟรี / $9-300/เดือน",
+                        link: "https://remove.bg",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Remini",
+                        description: "ปรับคมภาพ เพิ่มคุณภาพใบหน้า AI enhancement",
+                        features: ["Photo enhancement", "Face quality", "Unblur"],
+                        pricing: "5 ครั้ง/วัน ฟรี / $10/เดือน",
+                        link: "https://remini.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    }
+                ]
+            },
+            "video": {
+                title: "สร้างวิดีโอ",
+                icon: "🎬",
+                tools: [
+                    {
+                        name: "Google Flow",
+                        description: "⚡ ทำหนังด้วย AI! Veo 3.1 + Imagen 4 + Nanobanana Pro คุณภาพสูงพร้อมเสียง",
+                        features: ["Veo 3.1", "Filmmaking", "Audio generation", "Camera controls", "Scene extension"],
+                        pricing: "$20-30/เดือน (AI Pro/Ultra)",
+                        link: "https://labs.google/flow",
+                        type: "paid",
+                        region: "global",
+                        hot: true
+                    },
+                    {
+                        name: "Runway Gen-3",
+                        description: "คุณภาพสูงสุด มืออาชีพ Gen-3 Alpha สำหรับ filmmaker",
+                        features: ["Gen-3 Alpha", "Professional quality", "Image-to-video"],
+                        pricing: "125 credits ฟรี / $12-76/เดือน",
+                        link: "https://runwayml.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Luma Dream Machine",
+                        description: "สร้างวิดีโอคุณภาพดี 5 วินาที ควบคุมกล้องได้",
+                        features: ["High quality", "5-second clips", "Camera controls"],
+                        pricing: "30 ครั้ง/เดือน ฟรี / $30/เดือน",
+                        link: "https://lumalabs.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Pika Labs",
+                        description: "แก้ไขวิดีโอด้วย AI Lip-sync Pika 1.5",
+                        features: ["Video editing", "Lip-sync", "Scene editing", "Pika 1.5"],
+                        pricing: "มีฟรี / $10-70/เดือน",
+                        link: "https://pika.art",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "HeyGen",
+                        description: "อวาตาร์พูดด้วย AI โคลนเสียง สร้างวิดีโอพรีเซนเตอร์",
+                        features: ["AI avatars", "Voice cloning", "Instant avatars", "Templates"],
+                        pricing: "1 นาทีฟรี / $24-360/เดือน",
+                        link: "https://heygen.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "D-ID",
+                        description: "รูปเป็นวิดีโอพูด Talking avatars สร้างง่าย",
+                        features: ["Image to video", "Talking avatars", "Multiple voices"],
+                        pricing: "20 credits/เดือน ฟรี / $6-300/เดือน",
+                        link: "https://d-id.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "CapCut",
+                        description: "ตัดต่อวิดีโอมือถือ + AI ฟรี จาก ByteDance",
+                        features: ["Mobile editing", "AI features", "Free", "TikTok integration"],
+                        pricing: "🆓 ฟรี",
+                        link: "https://capcut.com",
+                        type: "free",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Descript",
+                        description: "แก้ไขวิดีโอด้วย transcript ตัดต่อแบบข้อความ",
+                        features: ["Transcript editing", "Studio sound", "Screen recording"],
+                        pricing: "1 ชม./เดือน ฟรี / $24/เดือน",
+                        link: "https://descript.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Opus Clip",
+                        description: "ตัดวิดีโอยาวเป็นสั้น สำหรับ YouTube Shorts TikTok",
+                        features: ["Long to short", "Auto captions", "Viral clips"],
+                        pricing: "60 นาที/เดือน ฟรี / $15-57/เดือน",
+                        link: "https://opus.pro",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    }
+                ]
+            },
+            "audio": {
+                title: "เสียงและดนตรี",
+                icon: "🎵",
+                tools: [
+                    {
+                        name: "Suno AI",
+                        description: "สร้างเพลงเต็มพร้อมเนื้อร้อง หลายแนวเพลง",
+                        features: ["Full songs", "Lyrics", "Multiple genres", "v4"],
+                        pricing: "50 credits/วัน ฟรี / $10-30/เดือน",
+                        link: "https://suno.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Udio",
+                        description: "สร้างเพลงคุณภาพสูง ปรับแต่งได้ รีมิกซ์",
+                        features: ["High quality audio", "Style control", "Remix"],
+                        pricing: "1,200 credits/เดือน ฟรี / $10-30/เดือน",
+                        link: "https://udio.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "ElevenLabs",
+                        description: "เสียงสมจริงสุด! โคลนเสียง TTS 29 ภาษา",
+                        features: ["Realistic voices", "Voice cloning", "29 languages", "TTS"],
+                        pricing: "10k chars/เดือน ฟรี / $5-330/เดือน",
+                        link: "https://elevenlabs.io",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Murf AI",
+                        description: "พากย์เสียงมืออาชีพ 120+ เสียง หลายภาษา",
+                        features: ["120+ voices", "Professional voiceover", "Commercial use"],
+                        pricing: "10 นาทีทดลอง / $19-79/เดือน",
+                        link: "https://murf.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "NotebookLM",
+                        description: "⚡ Google - เอกสารเป็นพอดแคสต์! สนทนา 2 คน อัตโนมัติ",
+                        features: ["Docs to podcast", "Two-host discussion", "Source grounding", "Free"],
+                        pricing: "🆓 ฟรี (Google)",
+                        link: "https://notebooklm.google.com",
+                        type: "free",
+                        region: "global",
+                        hot: true
+                    },
+                    {
+                        name: "Speechify",
+                        description: "อ่านข้อความออกเสียง PDF เว็บ อีเมล",
+                        features: ["Text to speech", "PDF reader", "Web reader", "Natural voices"],
+                        pricing: "ฟรีจำกัด / $29/เดือน",
+                        link: "https://speechify.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    }
+                ]
+            },
+            "code": {
+                title: "เขียนโค้ดและพัฒนา",
+                icon: "💻",
+                tools: [
+                    {
+                        name: "Cursor",
+                        description: "AI-first IDE แชทกับโค้ดได้ แก้ไขหลายไฟล์",
+                        features: ["AI-first IDE", "Chat with code", "Multi-file editing", "VS Code fork"],
+                        pricing: "2,000 completions ฟรี / $20/เดือน",
+                        link: "https://cursor.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "GitHub Copilot",
+                        description: "มาตรฐานอุตสาหกรรม AI code completion",
+                        features: ["Code completion", "Multiple languages", "Chat interface", "GitHub integration"],
+                        pricing: "ฟรีนักเรียน/OSS / $10-19/เดือน",
+                        link: "https://github.com/features/copilot",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Windsurf",
+                        description: "Cascade AI แก้ไขหลายไฟล์ ฟรีจาก Codeium",
+                        features: ["Cascade AI", "Multi-file", "Free forever", "Codeium team"],
+                        pricing: "🆓 ฟรีทั้งหมด",
+                        link: "https://codeium.com/windsurf",
+                        type: "free",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Codeium",
+                        description: "ฟรีตลอดกาล! 70+ ภาษา IDE integration",
+                        features: ["70+ languages", "IDE integration", "Autocomplete", "Free forever"],
+                        pricing: "🆓 ฟรีไม่จำกัด",
+                        link: "https://codeium.com",
+                        type: "free",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Bolt.new",
+                        description: "Full-stack ในเบราว์เซอร์ สร้างแอปทันที",
+                        features: ["Full-stack", "In-browser", "Deploy one-click", "Claude Sonnet"],
+                        pricing: "มีฟรี / $20/เดือน",
+                        link: "https://bolt.new",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "v0 by Vercel",
+                        description: "สร้าง UI components React ด้วย AI",
+                        features: ["React components", "Shadcn/ui", "Production ready", "Vercel"],
+                        pricing: "200 credits/เดือน ฟรี / $20/เดือน",
+                        link: "https://v0.dev",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Codia AI",
+                        description: "⭐ Figma/Screenshot เป็นโค้ด + NoteSlide แปลง NotebookLM PDF เป็น PPT!",
+                        features: ["Figma to code", "Screenshot to code", "NotebookLM to PPT", "10 วินาที"],
+                        pricing: "มีฟรี / $16-50/เดือน",
+                        link: "https://codia.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: true
+                    },
+                    {
+                        name: "Replit",
+                        description: "เขียนโค้ด + Deploy ในที่เดียว Ghostwriter AI",
+                        features: ["Code + Deploy", "Ghostwriter AI", "Instant deployment", "Collaboration"],
+                        pricing: "มีฟรี / $20/เดือน",
+                        link: "https://replit.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    }
+                ]
+            },
+            "presentation": {
+                title: "เอกสารและนำเสนอ",
+                icon: "📊",
+                tools: [
+                    {
+                        name: "Gamma",
+                        description: "Text to Presentation ที่ดีที่สุด! สวยงามและใช้ง่าย",
+                        features: ["Text to slides", "Beautiful templates", "Interactive cards", "AI generation"],
+                        pricing: "400 credits ฟรี / $10-20/เดือน",
+                        link: "https://gamma.app",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Tome",
+                        description: "รูปแบบเล่าเรื่อง AI layouts สร้างภาพในตัว",
+                        features: ["Storytelling format", "AI layouts", "Image generation", "Beautiful design"],
+                        pricing: "500 credits ฟรี / $10-20/เดือน",
+                        link: "https://tome.app",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Beautiful.ai",
+                        description: "Template อัตโนมัติ ทำงานร่วมกันทีม Brand kit",
+                        features: ["Auto-formatting", "Team collaboration", "Brand kit", "Smart templates"],
+                        pricing: "3 โปรเจคฟรี / $12-50/เดือน",
+                        link: "https://beautiful.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Canva",
+                        description: "ดีไซน์ทุกอย่าง Template เยอะ AI ในตัว",
+                        features: ["Magic Design", "Magic Write", "Huge templates", "Easy to use"],
+                        pricing: "ฟรีพื้นฐาน / $13-40/เดือน",
+                        link: "https://canva.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Notion AI",
+                        description: "Workspace + AI ในตัว จดบันทึก จัดการงาน",
+                        features: ["Workspace + AI", "Writing assistant", "Q&A docs", "Collaboration"],
+                        pricing: "ฟรีพื้นฐาน / $10-15/เดือน",
+                        link: "https://notion.so",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Napkin AI",
+                        description: "Text to Infographic/Diagram อัตโนมัติ",
+                        features: ["Text to infographic", "Diagrams", "Flowcharts", "Visual storytelling"],
+                        pricing: "10 exports/เดือน ฟรี / $10-20/เดือน",
+                        link: "https://napkin.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    }
+                ]
+            },
+            "research": {
+                title: "วิเคราะห์และวิจัย",
+                icon: "🔬",
+                tools: [
+                    {
+                        name: "Perplexity Pro",
+                        description: "Search engine AI ที่ดีที่สุด! เรียลไทม์ มีอ้างอิง",
+                        features: ["Best AI search", "Real-time", "Citations", "Research mode", "File upload"],
+                        pricing: "5 Pro/วัน ฟรี / $20/เดือน",
+                        link: "https://www.perplexity.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "NotebookLM",
+                        description: "Google - ถาม-ตอบอิงแหล่งที่มา สร้างพอดแคสต์",
+                        features: ["Source-grounded", "Upload sources", "Q&A with citations", "Generate podcasts"],
+                        pricing: "🆓 ฟรีไม่จำกัด",
+                        link: "https://notebooklm.google.com",
+                        type: "free",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "ChatPDF",
+                        description: "สนทนากับ PDF หลายเอกสาร ดึงความรู้",
+                        features: ["Chat with PDFs", "Multi-document", "Extract insights", "Fast"],
+                        pricing: "120 หน้า/วัน ฟรี / $5-10/เดือน",
+                        link: "https://chatpdf.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Consensus",
+                        description: "ค้นหาบทความวิทยาศาสตร์ AI summaries",
+                        features: ["Scientific papers", "AI summaries", "Citation quality", "Research"],
+                        pricing: "20 searches/เดือน ฟรี / $9-25/เดือน",
+                        link: "https://consensus.app",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Elicit",
+                        description: "ผู้ช่วยวิจัย รีวิวเอกสาร ดึงข้อมูล",
+                        features: ["Research assistant", "Literature review", "Extract data", "Academic"],
+                        pricing: "มีฟรี / $10-42/เดือน",
+                        link: "https://elicit.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Julius AI",
+                        description: "วิเคราะห์ข้อมูล สนทนากับ spreadsheet สร้างกราฟ",
+                        features: ["Data analysis", "Chat with spreadsheets", "Visualizations", "Python"],
+                        pricing: "15 messages/เดือน ฟรี / $20/เดือน",
+                        link: "https://julius.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    }
+                ]
+            },
+            "productivity": {
+                title: "ผลิตภาพและอัตโนมัติ",
+                icon: "⚡",
+                tools: [
+                    {
+                        name: "Zapier AI",
+                        description: "Automation 6,000+ integrations AI chatbots",
+                        features: ["6,000+ apps", "Natural language", "AI chatbots", "Workflows"],
+                        pricing: "100 tasks/เดือน ฟรี / $20-400/เดือน",
+                        link: "https://zapier.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Otter.ai",
+                        description: "ถอดความประชุมเรียลไทม์ สรุปด้วย AI",
+                        features: ["Real-time transcription", "AI summaries", "Zoom integration", "Action items"],
+                        pricing: "300 นาที/เดือน ฟรี / $17-30/เดือน",
+                        link: "https://otter.ai",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Motion",
+                        description: "AI calendar + task บริหารเวลาอัตโนมัติ",
+                        features: ["AI calendar", "Task scheduling", "Calendar management", "Project planning"],
+                        pricing: "7 วันทดลอง / $19-34/เดือน",
+                        link: "https://usemotion.com",
+                        type: "paid",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Notion AI",
+                        description: "Workspace + AI จัดการงาน จดบันทึก",
+                        features: ["Workspace", "AI writing", "Q&A docs", "Collaboration"],
+                        pricing: "ฟรีพื้นฐาน / $10-15/เดือน",
+                        link: "https://notion.so",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    },
+                    {
+                        name: "Grammarly",
+                        description: "ตรวจแก้ไขภาษา เขียนได้ดีขึ้น",
+                        features: ["Grammar check", "Tone detector", "Clarity", "Writing assistant"],
+                        pricing: "ฟรีพื้นฐาน / $12/เดือน",
+                        link: "https://grammarly.com",
+                        type: "freemium",
+                        region: "global",
+                        hot: false
+                    }
+                ]
+            }
+        };
+
+        // Initialize
+        let currentPriceFilter = 'all';
+        let currentRegionFilter = null;
+        let searchQuery = '';
+
+        function renderTools() {
+            const container = document.getElementById('toolsContainer');
+            container.innerHTML = '';
+
+            Object.keys(aiTools).forEach(categoryKey => {
+                const category = aiTools[categoryKey];
+                const filteredTools = category.tools.filter(tool => {
+                    if (currentPriceFilter !== 'all' && tool.type !== currentPriceFilter) return false;
+                    if (currentRegionFilter && tool.region !== currentRegionFilter) return false;
+                    if (searchQuery) {
+                        const searchLower = searchQuery.toLowerCase();
+                        return tool.name.toLowerCase().includes(searchLower) ||
+                               tool.description.toLowerCase().includes(searchLower) ||
+                               tool.features.some(f => f.toLowerCase().includes(searchLower));
+                    }
+                    return true;
+                });
+
+                if (filteredTools.length === 0) return;
+
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category fade-in';
+                categoryDiv.innerHTML = `
+                    <div class="category-header">
+                        <span class="category-icon">${category.icon}</span>
+                        <h2 class="category-title">${category.title}</h2>
+                        <span class="category-count">${filteredTools.length}</span>
+                    </div>
+                    <div class="tools-grid">
+                        ${filteredTools.map(tool => `
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <div>
+                                        <h3 class="tool-name">${tool.name}</h3>
+                                    </div>
+                                    <div class="tool-badges">
+                                        ${tool.hot ? '<span class="tool-badge badge-hot">🔥 HOT</span>' : ''}
+                                        <span class="tool-badge badge-${tool.type}">
+                                            ${tool.type === 'free' ? '🆓 FREE' : 
+                                              tool.type === 'freemium' ? '💎 FREEMIUM' : 
+                                              '💰 PAID'}
+                                        </span>
+                                        ${tool.region === 'chinese' ? '<span class="tool-badge badge-chinese">🇨🇳 จีน</span>' : ''}
+                                    </div>
+                                </div>
+                                <p class="tool-description">${tool.description}</p>
+                                <div class="tool-features">
+                                    ${tool.features.map(f => `<span class="feature-tag">${f}</span>`).join('')}
+                                </div>
+                                <div class="tool-footer">
+                                    <div class="tool-pricing">
+                                        <span class="pricing-amount">${tool.pricing}</span>
+                                    </div>
+                                    <a href="${tool.link}" target="_blank" class="tool-link">
+                                        เข้าใช้งาน →
+                                    </a>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(categoryDiv);
+            });
+
+            if (container.innerHTML === '') {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <div class="no-results-icon">🔍</div>
+                        <h3>ไม่พบเครื่องมือที่ตรงกับคำค้นหา</h3>
+                        <p>ลองเปลี่ยนคำค้นหาหรือตัวกรองใหม่</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Search functionality
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderTools();
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const priceFilter = btn.dataset.price;
+                const regionFilter = btn.dataset.region;
+
+                if (priceFilter) {
+                    document.querySelectorAll('[data-price]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentPriceFilter = priceFilter;
+                }
+
+                if (regionFilter) {
+                    if (btn.classList.contains('active')) {
+                        btn.classList.remove('active');
+                        currentRegionFilter = null;
+                    } else {
+                        document.querySelectorAll('[data-region]').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        currentRegionFilter = regionFilter;
+                    }
+                }
+
+                renderTools();
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initial render
+        renderTools();
+    </script>
+</body>
+</html>
