@@ -915,19 +915,19 @@
             </div>
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-number">350+</div>
+                    <div class="stat-number">358+</div>
                     <div class="stat-label">AI Tools</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">12</div>
+                    <div class="stat-number">18</div>
                     <div class="stat-label">หมวดหมู่</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">50+</div>
+                    <div class="stat-number">80+</div>
                     <div class="stat-label">เครื่องมือฟรี</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">8</div>
+                    <div class="stat-number">15+</div>
                     <div class="stat-label">AI จีน</div>
                 </div>
             </div>
@@ -979,16 +979,16 @@
                     <p>แก้ไขภาพด้วย AI จาก Google ที่รักษาใบหน้าและฉากเดิมได้เยี่ยม - ดีกว่า Flux Kontext!</p>
                 </div>
                 <div class="highlight-item">
-                    <h4>🎬 Google Flow</h4>
-                    <p>ทำหนังด้วย AI! ใช้ Veo 3.1 สร้างวิดีโอคุณภาพสูงพร้อมเสียง - เหมาะสำหรับ Content Creator</p>
+                    <h4>🎬 Google Flow + Sora</h4>
+                    <p>ทำหนังด้วย AI! Veo 3.1 และ Sora จาก OpenAI สร้างวิดีโอคุณภาพสูง HD - เหมาะสำหรับ Content Creator</p>
                 </div>
                 <div class="highlight-item">
-                    <h4>🇨🇳 Chinese AI Boom</h4>
-                    <p>DeepSeek, Qwen, Kimi, Doubao - AI จีนที่มีคุณภาพเทียบเท่าสากลแต่ราคาถูกกว่าครึ่ง!</p>
+                    <h4>🇨🇳 Chinese AI Boom 2026</h4>
+                    <p>DeepSeek, Qwen3, Manus, Kling, Wan 2.1 - AI จีนที่มีคุณภาพระดับโลก ฟรีหรือถูกกว่าครึ่ง!</p>
                 </div>
                 <div class="highlight-item">
-                    <h4>📊 Codia AI NoteSlide</h4>
-                    <p>แปลง NotebookLM PDF เป็น PowerPoint ที่แก้ไขได้ใน 10 วินาที - เหมาะสำหรับนำเสนอ!</p>
+                    <h4>🤖 AI Agents Era</h4>
+                    <p>Claude Computer Use, OpenAI Operator, Devin, CrewAI - AI ทำงานอัตโนมัติแทนคนได้แล้ว!</p>
                 </div>
             </div>
         </div>
@@ -1019,10 +1019,10 @@
                     </tr>
                     <tr>
                         <td><strong>โมเดล</strong></td>
-                        <td>GPT-4o</td>
-                        <td>Sonnet 3.7</td>
-                        <td>Gemini 1.5 Pro</td>
-                        <td>DeepSeek-R1</td>
+                        <td>GPT-4o / o3</td>
+                        <td>Claude Sonnet 4.5</td>
+                        <td>Gemini 2.5 Pro</td>
+                        <td>DeepSeek-V3</td>
                     </tr>
                     <tr>
                         <td><strong>จุดแข็ง</strong></td>
@@ -1111,7 +1111,7 @@
                         <li><strong style="color: white;">AI Adoption & Self Service</strong></li>
                         <li>Enterprise Digital and AI</li>
                         <li style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">สำหรับพนักงาน SCGC</li>
-                        <li style="color: var(--aily-cyan); font-weight: 600;">Version 1.0 - Feb 2025</li>
+                        <li style="color: var(--aily-cyan); font-weight: 600;">Version 2.0 - Feb 2026</li>
                     </ul>
                 </div>
             </div>
@@ -1125,654 +1125,484 @@
     <div class="back-to-top" id="backToTop">↑</div>
 
     <script>
-        // AI Tools Data - Same as before
+        // AI Tools Data - 350+ Tools
         const aiTools = {
             "chat": {
                 title: "สนทนาและเขียนข้อความ",
                 icon: "💬",
                 tools: [
-                    {
-                        name: "ChatGPT",
-                        description: "AI chatbot ที่หลากหลาย เขียนโค้ดเก่ง Browse web ได้",
-                        features: ["GPT-4o", "DALL-E 3", "Browse web", "Voice mode"],
-                        pricing: "ฟรี / $20/เดือน",
-                        link: "https://chatgpt.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Claude",
-                        description: "วิเคราะห์เชิงลึก บริบท 200K tokens ใช้ Artifacts ได้",
-                        features: ["Sonnet 3.7", "200K context", "Artifacts", "วิเคราะห์ลึก"],
-                        pricing: "ฟรี / $20/เดือน",
-                        link: "https://claude.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Gemini",
-                        description: "ผสาน Google บริบท 1M tokens มี Nanobanana และ Flow",
-                        features: ["Gemini 1.5 Pro", "1M context", "Nanobanana", "Flow"],
-                        pricing: "ฟรี / $20/เดือน",
-                        link: "https://gemini.google.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "DeepSeek",
-                        description: "⚡ AI จีน Reasoning เก่ง MoE ราคาถูก คุณภาพเทียบ GPT-4o",
-                        features: ["DeepSeek-R1", "MoE", "Reasoning", "ฟรีทั้งหมด"],
-                        pricing: "🆓 ฟรี",
-                        link: "https://chat.deepseek.com",
-                        type: "free",
-                        region: "chinese",
-                        hot: true
-                    },
-                    {
-                        name: "Qwen (通义千问)",
-                        description: "Alibaba AI ทรงพลัง Qwen 2.5-Max แข่งกับ GPT-4o",
-                        features: ["Qwen 2.5-Max", "Multi-modal", "MoE", "Alibaba"],
-                        pricing: "🆓 ฟรี / มี Pro",
-                        link: "https://tongyi.aliyun.com",
-                        type: "freemium",
-                        region: "chinese",
-                        hot: true
-                    },
-                    {
-                        name: "Kimi",
-                        description: "Moonshot AI บริบท 2M tokens อ่านเอกสารยาวได้",
-                        features: ["2M context", "อ่านหนังสือทั้งเล่ม", "ฟรีใช้งาน"],
-                        pricing: "🆓 ฟรี",
-                        link: "https://kimi.moonshot.cn",
-                        type: "free",
-                        region: "chinese",
-                        hot: false
-                    },
-                    {
-                        name: "Doubao (豆包)",
-                        description: "ByteDance (TikTok) 1.5 Pro ราคาถูกกว่าครึ่ง",
-                        features: ["Doubao 1.5 Pro", "Multi-modal", "ราคาถูก", "ByteDance"],
-                        pricing: "🆓 ฟรี",
-                        link: "https://doubao.com",
-                        type: "free",
-                        region: "chinese",
-                        hot: false
-                    },
-                    {
-                        name: "Perplexity AI",
-                        description: "ค้นหาเว็บเรียลไทม์ มีอ้างอิง เหมาะสำหรับวิจัย",
-                        features: ["Real-time search", "Citations", "Research mode"],
-                        pricing: "ฟรี 5 Pro/วัน / $20/เดือน",
-                        link: "https://www.perplexity.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Jasper",
-                        description: "เขียนคัดลอกการตลาด แบรนด์ดิ้ง สำหรับธุรกิจ",
-                        features: ["Marketing copy", "Brand voice", "Templates", "Team"],
-                        pricing: "$49-125/เดือน",
-                        link: "https://jasper.ai",
-                        type: "paid",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Grammarly",
-                        description: "ตรวจแก้ไขภาษาอังกฤษ เขียนได้ดีขึ้น",
-                        features: ["Grammar check", "Tone", "Clarity", "Writing assistant"],
-                        pricing: "ฟรี / $12/เดือน",
-                        link: "https://grammarly.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    }
+                    { name: "ChatGPT", description: "AI chatbot ที่หลากหลาย เขียนโค้ดเก่ง Browse web ได้ GPT-4o + o3", features: ["GPT-4o", "DALL-E 3", "Browse web", "Voice mode", "o3 reasoning"], pricing: "ฟรี / $20/เดือน", link: "https://chatgpt.com", type: "freemium", region: "global", hot: true },
+                    { name: "Claude", description: "วิเคราะห์เชิงลึก บริบท 200K tokens ใช้ Artifacts และ Projects ได้ Claude Sonnet 4.5", features: ["Claude Sonnet 4.5", "200K context", "Artifacts", "Projects", "Computer Use"], pricing: "ฟรี / $20/เดือน", link: "https://claude.ai", type: "freemium", region: "global", hot: true },
+                    { name: "Gemini", description: "ผสาน Google บริบท 1M tokens มี Nanobanana และ Flow Gemini 2.5 Pro", features: ["Gemini 2.5 Pro", "1M context", "Deep Research", "Nanobanana"], pricing: "ฟรี / $20/เดือน", link: "https://gemini.google.com", type: "freemium", region: "global", hot: true },
+                    { name: "DeepSeek", description: "⚡ AI จีน Reasoning เก่ง DeepSeek-R2 ราคาถูก คุณภาพเทียบ GPT-4o", features: ["DeepSeek-R1", "DeepSeek-V3", "MoE", "Reasoning", "ฟรีทั้งหมด"], pricing: "🆓 ฟรี", link: "https://chat.deepseek.com", type: "free", region: "chinese", hot: true },
+                    { name: "Qwen (通义千问)", description: "Alibaba AI ทรงพลัง Qwen3-235B แข่งกับ GPT-4o", features: ["Qwen3-235B", "Multi-modal", "MoE", "Open source"], pricing: "🆓 ฟรี / มี Pro", link: "https://tongyi.aliyun.com", type: "freemium", region: "chinese", hot: true },
+                    { name: "Kimi", description: "Moonshot AI บริบท 2M tokens อ่านเอกสารยาวได้ Kimi k1.5", features: ["2M context", "Kimi k1.5", "อ่านหนังสือทั้งเล่ม", "Deep Research"], pricing: "🆓 ฟรี", link: "https://kimi.moonshot.cn", type: "free", region: "chinese", hot: false },
+                    { name: "Doubao (豆包)", description: "ByteDance (TikTok) 1.5 Pro ราคาถูกกว่าครึ่ง มี voice และ image", features: ["Doubao 1.5 Pro", "Multi-modal", "Voice mode", "ByteDance"], pricing: "🆓 ฟรี", link: "https://doubao.com", type: "free", region: "chinese", hot: false },
+                    { name: "Baidu Ernie Bot", description: "ERNIE 4.5 จาก Baidu ภาษาจีนเก่งมาก", features: ["ERNIE 4.5", "Chinese NLP", "Multi-modal", "Baidu ecosystem"], pricing: "🆓 ฟรี / มี Pro", link: "https://yiyan.baidu.com", type: "freemium", region: "chinese", hot: false },
+                    { name: "Zhipu AI (智谱清言)", description: "GLM-4 AI จีน ภาษาไทยและอังกฤษได้ดี", features: ["GLM-4", "Multi-modal", "Code gen", "Long context"], pricing: "🆓 ฟรี", link: "https://chatglm.cn", type: "free", region: "chinese", hot: false },
+                    { name: "Hunyuan (混元)", description: "Tencent AI multi-modal เก่ง ฟรีใช้งาน", features: ["Multi-modal", "Tencent", "Chinese", "Writing assistant"], pricing: "🆓 ฟรี", link: "https://hunyuan.tencent.com", type: "free", region: "chinese", hot: false },
+                    { name: "Perplexity AI", description: "ค้นหาเว็บเรียลไทม์ มีอ้างอิง เหมาะสำหรับวิจัย", features: ["Real-time search", "Citations", "Deep Research", "File upload"], pricing: "ฟรี 5 Pro/วัน / $20/เดือน", link: "https://www.perplexity.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Grok", description: "xAI จาก Elon Musk เชื่อมต่อ X (Twitter) เรียลไทม์ Grok-3", features: ["Grok-3", "X integration", "Real-time", "Think mode"], pricing: "ฟรี / $30/เดือน (Premium+)", link: "https://grok.com", type: "freemium", region: "global", hot: true },
+                    { name: "Meta AI", description: "Llama 4 จาก Meta ฟรี ผสาน Facebook, Instagram, WhatsApp", features: ["Llama 4", "Meta apps", "Image gen", "Multi-language"], pricing: "🆓 ฟรี", link: "https://meta.ai", type: "free", region: "global", hot: false },
+                    { name: "Microsoft Copilot", description: "AI จาก Microsoft ผสาน Office 365 GPT-4o", features: ["GPT-4o", "Office 365", "DALL-E 3", "Designer"], pricing: "ฟรี / $30/เดือน", link: "https://copilot.microsoft.com", type: "freemium", region: "global", hot: false },
+                    { name: "Jasper", description: "เขียนคัดลอกการตลาด แบรนด์ดิ้ง สำหรับธุรกิจ", features: ["Marketing copy", "Brand voice", "Templates", "Team"], pricing: "$49-125/เดือน", link: "https://jasper.ai", type: "paid", region: "global", hot: false },
+                    { name: "Copy.ai", description: "เขียน copy ตลาด ครีเอทีฟ ทีม workflows", features: ["Marketing copy", "Workflows", "Team features", "Brand voice"], pricing: "2,000 words ฟรี / $36-186/เดือน", link: "https://copy.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Writesonic", description: "สร้างบทความ SEO copy AI ทำงานร่วมกันทีม", features: ["SEO writing", "Article generation", "Fact-checking", "Team"], pricing: "10K words ฟรี / $16-79/เดือน", link: "https://writesonic.com", type: "freemium", region: "global", hot: false },
+                    { name: "Grammarly", description: "ตรวจแก้ไขภาษาอังกฤษ เขียนได้ดีขึ้น", features: ["Grammar check", "Tone", "Clarity", "Writing assistant"], pricing: "ฟรี / $12/เดือน", link: "https://grammarly.com", type: "freemium", region: "global", hot: false },
+                    { name: "QuillBot", description: "Paraphrase เขียนใหม่ สรุป แปลภาษา", features: ["Paraphrasing", "Summarizer", "Grammar check", "Translator"], pricing: "ฟรีจำกัด / $10/เดือน", link: "https://quillbot.com", type: "freemium", region: "global", hot: false },
+                    { name: "Character.ai", description: "สร้างและคุยกับตัวละคร AI หลากหลาย", features: ["Character creation", "Roleplay", "Custom bots", "Community"], pricing: "ฟรีจำกัด / $10/เดือน", link: "https://character.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Poe", description: "แพลตฟอร์ม AI หลายโมเดล Claude, GPT-4o, Gemini ในที่เดียว", features: ["Multi-model", "Custom bots", "Share bots", "API access"], pricing: "ฟรีจำกัด / $20/เดือน", link: "https://poe.com", type: "freemium", region: "global", hot: false },
+                    { name: "Phind", description: "AI สำหรับ developer ค้นหาโค้ดเรียลไทม์", features: ["Developer search", "Code answers", "Real-time web", "Pro models"], pricing: "ฟรี / $17/เดือน", link: "https://phind.com", type: "freemium", region: "global", hot: false },
+                    { name: "You.com", description: "Search AI ส่วนตัว ค้นหาเว็บ + AI answers", features: ["AI search", "Custom apps", "Personal AI", "Privacy"], pricing: "ฟรี / $15-25/เดือน", link: "https://you.com", type: "freemium", region: "global", hot: false },
+                    { name: "Pi AI", description: "Personal AI พูดคุยเป็นเพื่อน EQ สูง", features: ["Conversational", "Empathetic", "Personal coach", "Voice chat"], pricing: "🆓 ฟรี", link: "https://pi.ai", type: "free", region: "global", hot: false },
+                    { name: "Inflection AI", description: "Pi AI บริษัทแม่ enterprise AI", features: ["Enterprise AI", "Custom models", "API"], pricing: "Enterprise", link: "https://inflection.ai", type: "paid", region: "global", hot: false },
+                    { name: "Mistral AI", description: "โมเดลเปิด ยุโรป ภาษาฝรั่งเศสเก่ง Mistral Large 2", features: ["Open weights", "Mixtral", "European", "API"], pricing: "ฟรี / API pricing", link: "https://chat.mistral.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Cohere", description: "Enterprise AI API command, embed สำหรับองค์กร", features: ["Command R+", "Embed", "Enterprise", "RAG"], pricing: "Trial ฟรี / Enterprise", link: "https://cohere.com", type: "freemium", region: "global", hot: false }
                 ]
             },
             "image": {
                 title: "สร้างและแก้ไขภาพ",
                 icon: "🎨",
                 tools: [
-                    {
-                        name: "Nanobanana",
-                        description: "⭐ Google Gemini 2.5 Flash - แก้ไขภาพด้วยข้อความ รักษาใบหน้าเดิม ดีกว่า Flux Kontext",
-                        features: ["Character Consistency", "Scene Preservation", "Text in Image", "Multi-step"],
-                        pricing: "🆓 ฟรี (Gemini)",
-                        link: "https://gemini.google.com",
-                        type: "free",
-                        region: "global",
-                        hot: true
-                    },
-                    {
-                        name: "Nanobanana Pro",
-                        description: "⭐ Gemini 3 Pro Image - แก้ไขขั้นสูง ความละเอียด 4K ข้อความชัดเจน",
-                        features: ["4K resolution", "Sharp text", "Professional editing", "Advanced control"],
-                        pricing: "$20/เดือน (Gemini Advanced)",
-                        link: "https://gemini.google.com",
-                        type: "paid",
-                        region: "global",
-                        hot: true
-                    },
-                    {
-                        name: "Midjourney",
-                        description: "มาตรฐานอุตสาหกรรม คุณภาพศิลปะสูง เหมาะสำหรับงาน creative",
-                        features: ["Art quality", "Consistent style", "Discord-based", "v6.1"],
-                        pricing: "$10-120/เดือน",
-                        link: "https://midjourney.com",
-                        type: "paid",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "DALL-E 3",
-                        description: "จาก OpenAI สร้างภาพสร้างสรรค์ ผสานกับ ChatGPT",
-                        features: ["OpenAI", "Creative", "Text understanding", "GPT integration"],
-                        pricing: "$20/เดือน (ChatGPT Plus)",
-                        link: "https://openai.com/dall-e-3",
-                        type: "paid",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Leonardo.ai",
-                        description: "สร้างภาพเกม ศิลปะ Realtime canvas ใช้งานง่าย",
-                        features: ["Game assets", "Realtime canvas", "Consistent characters"],
-                        pricing: "150 tokens/วัน ฟรี / $12/เดือน",
-                        link: "https://app.leonardo.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Playground AI",
-                        description: "สร้างภาพหลากหลายสไตล์ Canvas editor ปรับแต่งได้",
-                        features: ["Multiple models", "Canvas editor", "Fine controls"],
-                        pricing: "50 รูป/วัน ฟรี / $15/เดือน",
-                        link: "https://playground.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Ideogram",
-                        description: "สร้างข้อความในรูปชัดเจน เหมาะสำหรับโปสเตอร์",
-                        features: ["Text in images", "Typography", "Posters", "Magic Prompt"],
-                        pricing: "100 รูป/เดือน ฟรี / $8/เดือน",
-                        link: "https://ideogram.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Varoriya",
-                        description: "แพลตฟอร์มไทย รองรับ prompt ภาษาไทย สไตล์ศิลปะไทย",
-                        features: ["Thai platform", "Thai prompts", "Thai art styles"],
-                        pricing: "ฟรีจำกัด / มี Pro",
-                        link: "https://varoriya.com/th",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Remove.bg",
-                        description: "ลบพื้นหลังภาพอัตโนมัติ เร็วและแม่นยำ",
-                        features: ["Auto background removal", "HD output", "API"],
-                        pricing: "1 HD/เดือน ฟรี / $9-300/เดือน",
-                        link: "https://remove.bg",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Remini",
-                        description: "ปรับคมภาพ เพิ่มคุณภาพใบหน้า AI enhancement",
-                        features: ["Photo enhancement", "Face quality", "Unblur"],
-                        pricing: "5 ครั้ง/วัน ฟรี / $10/เดือน",
-                        link: "https://remini.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    }
+                    { name: "Nanobanana", description: "⭐ Google Gemini 2.5 Flash - แก้ไขภาพด้วยข้อความ รักษาใบหน้าเดิม ดีกว่า Flux Kontext", features: ["Character Consistency", "Scene Preservation", "Text in Image", "Multi-step"], pricing: "🆓 ฟรี (Gemini)", link: "https://gemini.google.com", type: "free", region: "global", hot: true },
+                    { name: "Nanobanana Pro", description: "⭐ Gemini 3 Pro Image - แก้ไขขั้นสูง ความละเอียด 4K ข้อความชัดเจน", features: ["4K resolution", "Sharp text", "Professional editing", "Advanced control"], pricing: "$20/เดือน (Gemini Advanced)", link: "https://gemini.google.com", type: "paid", region: "global", hot: true },
+                    { name: "Midjourney", description: "มาตรฐานอุตสาหกรรม คุณภาพศิลปะสูง Midjourney v7 เหมาะสำหรับงาน creative", features: ["Art quality", "v7", "Character ref", "Style ref", "Web UI"], pricing: "$10-120/เดือน", link: "https://midjourney.com", type: "paid", region: "global", hot: true },
+                    { name: "DALL-E 3", description: "จาก OpenAI สร้างภาพสร้างสรรค์ ผสานกับ ChatGPT", features: ["OpenAI", "Creative", "Text understanding", "GPT integration"], pricing: "$20/เดือน (ChatGPT Plus)", link: "https://openai.com/dall-e-3", type: "paid", region: "global", hot: false },
+                    { name: "Adobe Firefly", description: "Adobe AI สร้างภาพใน Photoshop/Illustrator ปลอดภัยทางกฎหมาย", features: ["Photoshop integration", "Commercially safe", "Text effects", "Vector graphics"], pricing: "25 credits/เดือน ฟรี / $5/เดือน", link: "https://firefly.adobe.com", type: "freemium", region: "global", hot: false },
+                    { name: "Stable Diffusion", description: "Open source สร้างภาพในเครื่อง ปรับแต่งได้สูง", features: ["Open source", "Local run", "LoRA", "Fine-tuning", "SDXL"], pricing: "🆓 ฟรี (self-hosted)", link: "https://stability.ai", type: "free", region: "global", hot: false },
+                    { name: "Flux", description: "โมเดลใหม่คุณภาพสูง Flux.1 Pro รายละเอียดสมจริง", features: ["Flux.1 Pro", "High detail", "Realistic", "Fast generation"], pricing: "API pricing / มีฟรี", link: "https://blackforestlabs.ai", type: "freemium", region: "global", hot: true },
+                    { name: "Leonardo.ai", description: "สร้างภาพเกม ศิลปะ Realtime canvas ใช้งานง่าย", features: ["Game assets", "Realtime canvas", "Consistent characters"], pricing: "150 tokens/วัน ฟรี / $12/เดือน", link: "https://app.leonardo.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Playground AI", description: "สร้างภาพหลากหลายสไตล์ Canvas editor ปรับแต่งได้", features: ["Multiple models", "Canvas editor", "Fine controls"], pricing: "50 รูป/วัน ฟรี / $15/เดือน", link: "https://playground.com", type: "freemium", region: "global", hot: false },
+                    { name: "Ideogram", description: "สร้างข้อความในรูปชัดเจน เหมาะสำหรับโปสเตอร์ Ideogram 2.0", features: ["Text in images", "Typography", "Posters", "Ideogram 2.0"], pricing: "100 รูป/เดือน ฟรี / $8/เดือน", link: "https://ideogram.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Varoriya", description: "แพลตฟอร์มไทย รองรับ prompt ภาษาไทย สไตล์ศิลปะไทย", features: ["Thai platform", "Thai prompts", "Thai art styles"], pricing: "ฟรีจำกัด / มี Pro", link: "https://varoriya.com/th", type: "freemium", region: "global", hot: false },
+                    { name: "Remove.bg", description: "ลบพื้นหลังภาพอัตโนมัติ เร็วและแม่นยำ", features: ["Auto background removal", "HD output", "API"], pricing: "1 HD/เดือน ฟรี / $9-300/เดือน", link: "https://remove.bg", type: "freemium", region: "global", hot: false },
+                    { name: "Remini", description: "ปรับคมภาพ เพิ่มคุณภาพใบหน้า AI enhancement", features: ["Photo enhancement", "Face quality", "Unblur"], pricing: "5 ครั้ง/วัน ฟรี / $10/เดือน", link: "https://remini.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Canva Magic Studio", description: "AI image gen ใน Canva ใช้งานง่ายมาก Dream Lab", features: ["Dream Lab", "Background remover", "Magic expand", "Text to image"], pricing: "ฟรีจำกัด / $13/เดือน", link: "https://canva.com", type: "freemium", region: "global", hot: false },
+                    { name: "Recraft", description: "สร้าง Vector SVG AI รักษาสไตล์ brand consistent", features: ["Vector SVG", "Brand style", "Design system", "Style library"], pricing: "50 credits ฟรี / $15/เดือน", link: "https://recraft.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Krea AI", description: "Real-time AI image generation แก้ไขแบบ live", features: ["Real-time generation", "Live editing", "Upscaler", "Enhance"], pricing: "มีฟรี / $24/เดือน", link: "https://krea.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Clipdrop", description: "ชุดเครื่องมือแก้ไขภาพ AI จาก Stability AI", features: ["Remove background", "Upscale", "Relight", "Cleanup"], pricing: "ฟรีจำกัด / $8-13/เดือน", link: "https://clipdrop.co", type: "freemium", region: "global", hot: false },
+                    { name: "Photoroom", description: "แก้ไขสินค้า e-commerce AI ลบพื้นหลัง สร้าง studio", features: ["Product photos", "Background removal", "AI studio", "Batch edit"], pricing: "ฟรีจำกัด / $10/เดือน", link: "https://photoroom.com", type: "freemium", region: "global", hot: false },
+                    { name: "Topaz Gigapixel AI", description: "Upscale ภาพ AI คุณภาพสูงสุด ไม่เบลอ", features: ["AI upscaling", "Face enhancement", "Noise reduction", "6x upscale"], pricing: "$200 one-time / $8/เดือน", link: "https://topazlabs.com/gigapixel", type: "paid", region: "global", hot: false },
+                    { name: "Lensa AI", description: "แต่งภาพ portrait Magic Avatars สร้างภาพตัวเองสวยงาม", features: ["Magic avatars", "Portrait editing", "Filters", "Retouch"], pricing: "มีฟรี / $3-30/เดือน", link: "https://prisma-ai.com/lensa", type: "freemium", region: "global", hot: false },
+                    { name: "NightCafe", description: "ชุมชน AI art สร้างภาพหลายโมเดล แบ่งปัน", features: ["Multiple models", "Community", "Credits system", "NFT"], pricing: "5 credits/วัน ฟรี / $6-50/เดือน", link: "https://nightcafe.studio", type: "freemium", region: "global", hot: false },
+                    { name: "DreamStudio", description: "Stability AI platform สร้างภาพ SD หลายโมเดล", features: ["Stable Diffusion", "SDXL", "Image editing", "API"], pricing: "25 credits ฟรี / Pay-per-use", link: "https://dreamstudio.ai", type: "freemium", region: "global", hot: false },
+                    { name: "SeaArt", description: "AI art platform ทำงานบน GPU cloud ฟรี", features: ["Free GPU", "Multiple models", "LoRA", "Community"], pricing: "ฟรีรายวัน / มี Pro", link: "https://seaart.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Tensor.art", description: "สร้างภาพ AI ฟรีบน cloud community models", features: ["Free generation", "Community models", "LoRA", "Workflow"], pricing: "🆓 ฟรีจำกัด / มี Pro", link: "https://tensor.art", type: "freemium", region: "global", hot: false },
+                    { name: "Pika Image", description: "สร้างและแก้ไขภาพ + แปลงเป็นวิดีโอ", features: ["Image generation", "Image to video", "Text effects", "Scene edit"], pricing: "150 credits/เดือน ฟรี / $8/เดือน", link: "https://pika.art", type: "freemium", region: "global", hot: false }
                 ]
             },
             "video": {
                 title: "สร้างวิดีโอ",
                 icon: "🎬",
                 tools: [
-                    {
-                        name: "Google Flow",
-                        description: "⚡ ทำหนังด้วย AI! Veo 3.1 + Imagen 4 + Nanobanana Pro คุณภาพสูงพร้อมเสียง",
-                        features: ["Veo 3.1", "Filmmaking", "Audio generation", "Camera controls", "Scene extension"],
-                        pricing: "$20-30/เดือน (AI Pro/Ultra)",
-                        link: "https://labs.google/flow",
-                        type: "paid",
-                        region: "global",
-                        hot: true
-                    },
-                    {
-                        name: "Runway Gen-3",
-                        description: "คุณภาพสูงสุด มืออาชีพ Gen-3 Alpha สำหรับ filmmaker",
-                        features: ["Gen-3 Alpha", "Professional quality", "Image-to-video"],
-                        pricing: "125 credits ฟรี / $12-76/เดือน",
-                        link: "https://runwayml.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Luma Dream Machine",
-                        description: "สร้างวิดีโอคุณภาพดี 5 วินาที ควบคุมกล้องได้",
-                        features: ["High quality", "5-second clips", "Camera controls"],
-                        pricing: "30 ครั้ง/เดือน ฟรี / $30/เดือน",
-                        link: "https://lumalabs.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Pika Labs",
-                        description: "แก้ไขวิดีโอด้วย AI Lip-sync Pika 1.5",
-                        features: ["Video editing", "Lip-sync", "Scene editing", "Pika 1.5"],
-                        pricing: "มีฟรี / $10-70/เดือน",
-                        link: "https://pika.art",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "HeyGen",
-                        description: "อวาตาร์พูดด้วย AI โคลนเสียง สร้างวิดีโอพรีเซนเตอร์",
-                        features: ["AI avatars", "Voice cloning", "Instant avatars", "Templates"],
-                        pricing: "1 นาทีฟรี / $24-360/เดือน",
-                        link: "https://heygen.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "D-ID",
-                        description: "รูปเป็นวิดีโอพูด Talking avatars สร้างง่าย",
-                        features: ["Image to video", "Talking avatars", "Multiple voices"],
-                        pricing: "20 credits/เดือน ฟรี / $6-300/เดือน",
-                        link: "https://d-id.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "CapCut",
-                        description: "ตัดต่อวิดีโอมือถือ + AI ฟรี จาก ByteDance",
-                        features: ["Mobile editing", "AI features", "Free", "TikTok integration"],
-                        pricing: "🆓 ฟรี",
-                        link: "https://capcut.com",
-                        type: "free",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Descript",
-                        description: "แก้ไขวิดีโอด้วย transcript ตัดต่อแบบข้อความ",
-                        features: ["Transcript editing", "Studio sound", "Screen recording"],
-                        pricing: "1 ชม./เดือน ฟรี / $24/เดือน",
-                        link: "https://descript.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Opus Clip",
-                        description: "ตัดวิดีโอยาวเป็นสั้น สำหรับ YouTube Shorts TikTok",
-                        features: ["Long to short", "Auto captions", "Viral clips"],
-                        pricing: "60 นาที/เดือน ฟรี / $15-57/เดือน",
-                        link: "https://opus.pro",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    }
+                    { name: "Google Flow", description: "⚡ ทำหนังด้วย AI! Veo 3.1 + Imagen 4 + Nanobanana Pro คุณภาพสูงพร้อมเสียง", features: ["Veo 3.1", "Filmmaking", "Audio generation", "Camera controls", "Scene extension"], pricing: "$20-30/เดือน (AI Pro/Ultra)", link: "https://labs.google/flow", type: "paid", region: "global", hot: true },
+                    { name: "Sora", description: "⚡ OpenAI video AI คุณภาพสูงสุด 20 วินาที realistic มาก", features: ["1080p output", "20 seconds", "Realistic", "Storyboard"], pricing: "$20/เดือน (ChatGPT Plus)", link: "https://sora.com", type: "paid", region: "global", hot: true },
+                    { name: "Runway Gen-3", description: "คุณภาพสูงสุด มืออาชีพ Gen-3 Alpha สำหรับ filmmaker", features: ["Gen-3 Alpha", "Professional quality", "Image-to-video", "Motion brush"], pricing: "125 credits ฟรี / $12-76/เดือน", link: "https://runwayml.com", type: "freemium", region: "global", hot: false },
+                    { name: "Luma Dream Machine", description: "สร้างวิดีโอคุณภาพดี 5 วินาที ควบคุมกล้องได้ Ray2", features: ["Ray2 model", "Camera controls", "5-second clips", "Keyframes"], pricing: "30 ครั้ง/เดือน ฟรี / $30/เดือน", link: "https://lumalabs.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Kling AI", description: "⚡ AI จีน สร้างวิดีโอคุณภาพดีมาก Kling 1.6 ฟรีใช้ได้", features: ["Kling 1.6", "5-second clips", "Character consistent", "Free tier"], pricing: "66 credits/วัน ฟรี / $10/เดือน", link: "https://klingai.com", type: "freemium", region: "chinese", hot: true },
+                    { name: "Hailuo AI (MiniMax)", description: "AI จีน video สร้างวิดีโอเร็ว คุณภาพดี ฟรี", features: ["Video generation", "I2V", "Fast", "Free"], pricing: "🆓 ฟรีจำกัด / มี Pro", link: "https://hailuoai.com", type: "freemium", region: "chinese", hot: true },
+                    { name: "Wan2.1", description: "AI จีน open source วิดีโอ 720p คุณภาพสูง", features: ["Open source", "720p", "Text to video", "I2V"], pricing: "🆓 ฟรี (open source)", link: "https://wan.video", type: "free", region: "chinese", hot: false },
+                    { name: "Pika Labs", description: "แก้ไขวิดีโอด้วย AI Lip-sync Pika 2.1 Scene editing", features: ["Video editing", "Lip-sync", "Scene editing", "Pika 2.1"], pricing: "มีฟรี / $10-70/เดือน", link: "https://pika.art", type: "freemium", region: "global", hot: false },
+                    { name: "HeyGen", description: "อวาตาร์พูดด้วย AI โคลนเสียง สร้างวิดีโอพรีเซนเตอร์", features: ["AI avatars", "Voice cloning", "Instant avatars", "Templates"], pricing: "1 นาทีฟรี / $24-360/เดือน", link: "https://heygen.com", type: "freemium", region: "global", hot: false },
+                    { name: "D-ID", description: "รูปเป็นวิดีโอพูด Talking avatars สร้างง่าย", features: ["Image to video", "Talking avatars", "Multiple voices"], pricing: "20 credits/เดือน ฟรี / $6-300/เดือน", link: "https://d-id.com", type: "freemium", region: "global", hot: false },
+                    { name: "CapCut", description: "ตัดต่อวิดีโอมือถือ + AI ฟรี จาก ByteDance", features: ["Mobile editing", "AI features", "Free", "Auto captions"], pricing: "🆓 ฟรี", link: "https://capcut.com", type: "free", region: "global", hot: false },
+                    { name: "Descript", description: "แก้ไขวิดีโอด้วย transcript ตัดต่อแบบข้อความ Overdub", features: ["Transcript editing", "Studio sound", "Overdub", "Screen recording"], pricing: "1 ชม./เดือน ฟรี / $24/เดือน", link: "https://descript.com", type: "freemium", region: "global", hot: false },
+                    { name: "Opus Clip", description: "ตัดวิดีโอยาวเป็นสั้น สำหรับ YouTube Shorts TikTok AI scoring", features: ["Long to short", "Auto captions", "Viral clips", "AI scoring"], pricing: "60 นาที/เดือน ฟรี / $15-57/เดือน", link: "https://opus.pro", type: "freemium", region: "global", hot: false },
+                    { name: "Synthesia", description: "สร้างวิดีโอ presenter AI avatar 230+ ภาษา สำหรับองค์กร", features: ["230+ languages", "AI presenters", "Custom avatars", "Enterprise"], pricing: "$22-67/เดือน", link: "https://synthesia.io", type: "paid", region: "global", hot: false },
+                    { name: "Invideo AI", description: "สร้างวิดีโอจาก script AI ใน 10 นาที", features: ["Script to video", "Stock footage", "Voiceover", "Text prompts"], pricing: "10 นาที/เดือน ฟรี / $20-60/เดือน", link: "https://invideo.io", type: "freemium", region: "global", hot: false },
+                    { name: "Pictory", description: "แปลงบทความ/blog เป็นวิดีโอโดยอัตโนมัติ", features: ["Article to video", "Auto captions", "Brand kit", "Podcast to video"], pricing: "3 วิดีโอ/เดือน ฟรี / $23-99/เดือน", link: "https://pictory.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Fliki", description: "Text to Video + Podcast ด้วย AI voice 2000+ voices", features: ["Text to video", "2000+ voices", "Stock footage", "Multi-language"], pricing: "5 นาที/เดือน ฟรี / $28-88/เดือน", link: "https://fliki.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Colossyan", description: "สร้าง learning video AI avatar สำหรับ training", features: ["Learning content", "AI avatars", "SCORM", "Branching scenarios"], pricing: "$27-300/เดือน", link: "https://colossyan.com", type: "paid", region: "global", hot: false },
+                    { name: "Topaz Video AI", description: "Upscale วิดีโอ AI คุณภาพสูงสุด slow motion", features: ["Video upscaling", "Slow motion", "Noise reduction", "4K output"], pricing: "$299 one-time", link: "https://topazlabs.com/topaz-video-ai", type: "paid", region: "global", hot: false },
+                    { name: "Captions.ai", description: "ใส่ caption อัตโนมัติ animate ปรับสไตล์ text ได้", features: ["Auto captions", "Animation", "Multiple styles", "Mobile app"], pricing: "ฟรีจำกัด / $7-17/เดือน", link: "https://captions.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Mootion", description: "AI จีน สร้าง 3D animation จาก text หรือภาพ", features: ["3D animation", "Text to 3D", "Character motion", "Chinese AI"], pricing: "ฟรีจำกัด / มี Pro", link: "https://mootion.com", type: "freemium", region: "chinese", hot: false }
                 ]
             },
             "audio": {
                 title: "เสียงและดนตรี",
                 icon: "🎵",
                 tools: [
-                    {
-                        name: "Suno AI",
-                        description: "สร้างเพลงเต็มพร้อมเนื้อร้อง หลายแนวเพลง",
-                        features: ["Full songs", "Lyrics", "Multiple genres", "v4"],
-                        pricing: "50 credits/วัน ฟรี / $10-30/เดือน",
-                        link: "https://suno.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Udio",
-                        description: "สร้างเพลงคุณภาพสูง ปรับแต่งได้ รีมิกซ์",
-                        features: ["High quality audio", "Style control", "Remix"],
-                        pricing: "1,200 credits/เดือน ฟรี / $10-30/เดือน",
-                        link: "https://udio.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "ElevenLabs",
-                        description: "เสียงสมจริงสุด! โคลนเสียง TTS 29 ภาษา",
-                        features: ["Realistic voices", "Voice cloning", "29 languages", "TTS"],
-                        pricing: "10k chars/เดือน ฟรี / $5-330/เดือน",
-                        link: "https://elevenlabs.io",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Murf AI",
-                        description: "พากย์เสียงมืออาชีพ 120+ เสียง หลายภาษา",
-                        features: ["120+ voices", "Professional voiceover", "Commercial use"],
-                        pricing: "10 นาทีทดลอง / $19-79/เดือน",
-                        link: "https://murf.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "NotebookLM",
-                        description: "⚡ Google - เอกสารเป็นพอดแคสต์! สนทนา 2 คน อัตโนมัติ",
-                        features: ["Docs to podcast", "Two-host discussion", "Source grounding", "Free"],
-                        pricing: "🆓 ฟรี (Google)",
-                        link: "https://notebooklm.google.com",
-                        type: "free",
-                        region: "global",
-                        hot: true
-                    },
-                    {
-                        name: "Speechify",
-                        description: "อ่านข้อความออกเสียง PDF เว็บ อีเมล",
-                        features: ["Text to speech", "PDF reader", "Web reader", "Natural voices"],
-                        pricing: "ฟรีจำกัด / $29/เดือน",
-                        link: "https://speechify.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    }
+                    { name: "Suno AI", description: "สร้างเพลงเต็มพร้อมเนื้อร้อง หลายแนวเพลง Suno v4.5", features: ["Full songs", "Lyrics", "Multiple genres", "v4.5", "Cover songs"], pricing: "50 credits/วัน ฟรี / $10-30/เดือน", link: "https://suno.com", type: "freemium", region: "global", hot: true },
+                    { name: "Udio", description: "สร้างเพลงคุณภาพสูง ปรับแต่งได้ รีมิกซ์ Udio 2", features: ["High quality audio", "Style control", "Remix", "Stem separation"], pricing: "1,200 credits/เดือน ฟรี / $10-30/เดือน", link: "https://udio.com", type: "freemium", region: "global", hot: false },
+                    { name: "ElevenLabs", description: "เสียงสมจริงสุด! โคลนเสียง TTS 32+ ภาษา Voice design", features: ["Realistic voices", "Voice cloning", "32+ languages", "TTS", "Sound effects"], pricing: "10k chars/เดือน ฟรี / $5-330/เดือน", link: "https://elevenlabs.io", type: "freemium", region: "global", hot: true },
+                    { name: "Murf AI", description: "พากย์เสียงมืออาชีพ 120+ เสียง หลายภาษา สำหรับ corporate", features: ["120+ voices", "Professional voiceover", "Commercial use", "Video sync"], pricing: "10 นาทีทดลอง / $19-79/เดือน", link: "https://murf.ai", type: "freemium", region: "global", hot: false },
+                    { name: "NotebookLM", description: "⚡ Google - เอกสารเป็นพอดแคสต์! สนทนา 2 คน อัตโนมัติ", features: ["Docs to podcast", "Two-host discussion", "Source grounding", "Free"], pricing: "🆓 ฟรี (Google)", link: "https://notebooklm.google.com", type: "free", region: "global", hot: true },
+                    { name: "Speechify", description: "อ่านข้อความออกเสียง PDF เว็บ อีเมล เร็ว 4.5x", features: ["Text to speech", "PDF reader", "Web reader", "4.5x speed"], pricing: "ฟรีจำกัด / $29/เดือน", link: "https://speechify.com", type: "freemium", region: "global", hot: false },
+                    { name: "Adobe Podcast", description: "ปรับปรุงคุณภาพเสียง remove noise AI ฟรีมากจาก Adobe", features: ["Noise removal", "Studio quality", "Transcription", "Free"], pricing: "🆓 ฟรี (Beta)", link: "https://podcast.adobe.com", type: "free", region: "global", hot: true },
+                    { name: "Descript", description: "ตัดต่อพอดแคสต์ด้วยข้อความ remove filler words Overdub", features: ["Edit by text", "Remove filler", "Overdub AI", "Multitrack"], pricing: "1 ชม./เดือน ฟรี / $24/เดือน", link: "https://descript.com", type: "freemium", region: "global", hot: false },
+                    { name: "Resemble AI", description: "โคลนเสียงด้วยเสียงตัวเองไม่กี่นาที Text to speech API", features: ["Voice cloning", "Fast clone", "Real-time TTS", "API"], pricing: "10k chars ฟรี / $30/เดือน", link: "https://resemble.ai", type: "freemium", region: "global", hot: false },
+                    { name: "PlayHT", description: "TTS สมจริง 900+ เสียง 142 ภาษา Voice cloning", features: ["900+ voices", "Voice cloning", "142 languages", "API"], pricing: "12.5k chars/เดือน ฟรี / $31-99/เดือน", link: "https://play.ht", type: "freemium", region: "global", hot: false },
+                    { name: "Aiva", description: "สร้างดนตรีประกอบ soundtrack สไตล์ต่างๆ", features: ["Orchestral", "Multiple styles", "Commercial rights", "MIDI export"], pricing: "3 downloads/เดือน ฟรี / $11-33/เดือน", link: "https://aiva.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Soundraw", description: "สร้างเพลงประกอบวิดีโอ ปรับ mood ยาวได้ไม่จำกัด", features: ["Royalty-free", "Unlimited length", "Mood selection", "Video sync"], pricing: "$16/เดือน", link: "https://soundraw.io", type: "paid", region: "global", hot: false },
+                    { name: "Beatoven.ai", description: "สร้างเพลงประกอบ podcast video ตาม mood", features: ["Mood-based", "Genre selection", "Royalty-free", "Export"], pricing: "5 tracks/เดือน ฟรี / $5-19/เดือน", link: "https://beatoven.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Lalal.ai", description: "แยก stem เสียง vocal, instruments ออกจากเพลง", features: ["Stem separation", "Vocal remover", "High quality", "Batch"], pricing: "90 นาทีฟรี / $15-35/pack", link: "https://lalal.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Krisp", description: "ตัดเสียงรบกวน background noise ระหว่าง meeting", features: ["Noise cancellation", "Echo removal", "Meeting assistant", "Real-time"], pricing: "60 นาที/วัน ฟรี / $8-16/เดือน", link: "https://krisp.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Whisper (OpenAI)", description: "ถอดความเสียงเป็นข้อความ 99 ภาษา Open source", features: ["99 languages", "Open source", "High accuracy", "Free self-host"], pricing: "🆓 ฟรี (API $0.006/min)", link: "https://openai.com/research/whisper", type: "free", region: "global", hot: false },
+                    { name: "Riverside.fm", description: "บันทึก podcast/video คุณภาพสูง แยก track ออก", features: ["Lossless recording", "Separate tracks", "Remote guests", "AI editing"], pricing: "2 ชม./เดือน ฟรี / $15-24/เดือน", link: "https://riverside.fm", type: "freemium", region: "global", hot: false },
+                    { name: "Loudme", description: "AI mastering เสียงอัตโนมัติ streaming-ready", features: ["AI mastering", "Streaming ready", "Multiple formats", "Instant"], pricing: "ฟรีจำกัด / $8-20/เดือน", link: "https://loudme.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Riffusion", description: "สร้างดนตรีจาก text prompt ฟรีทั้งหมด open source", features: ["Text to music", "Open source", "Spectrogram model", "Free"], pricing: "🆓 ฟรี", link: "https://riffusion.com", type: "free", region: "global", hot: false },
+                    { name: "ACE Studio", description: "AI singing จาก text ด้วยเสียงนักร้องจริง", features: ["AI singing", "Real voice models", "Note editing", "MIDI"], pricing: "มีฟรี / $12/เดือน", link: "https://acestudio.ai", type: "freemium", region: "global", hot: false }
                 ]
             },
             "code": {
                 title: "เขียนโค้ดและพัฒนา",
                 icon: "💻",
                 tools: [
-                    {
-                        name: "Cursor",
-                        description: "AI-first IDE แชทกับโค้ดได้ แก้ไขหลายไฟล์",
-                        features: ["AI-first IDE", "Chat with code", "Multi-file editing", "VS Code fork"],
-                        pricing: "2,000 completions ฟรี / $20/เดือน",
-                        link: "https://cursor.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "GitHub Copilot",
-                        description: "มาตรฐานอุตสาหกรรม AI code completion",
-                        features: ["Code completion", "Multiple languages", "Chat interface", "GitHub integration"],
-                        pricing: "ฟรีนักเรียน/OSS / $10-19/เดือน",
-                        link: "https://github.com/features/copilot",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Windsurf",
-                        description: "Cascade AI แก้ไขหลายไฟล์ ฟรีจาก Codeium",
-                        features: ["Cascade AI", "Multi-file", "Free forever", "Codeium team"],
-                        pricing: "🆓 ฟรีทั้งหมด",
-                        link: "https://codeium.com/windsurf",
-                        type: "free",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Codeium",
-                        description: "ฟรีตลอดกาล! 70+ ภาษา IDE integration",
-                        features: ["70+ languages", "IDE integration", "Autocomplete", "Free forever"],
-                        pricing: "🆓 ฟรีไม่จำกัด",
-                        link: "https://codeium.com",
-                        type: "free",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Bolt.new",
-                        description: "Full-stack ในเบราว์เซอร์ สร้างแอปทันที",
-                        features: ["Full-stack", "In-browser", "Deploy one-click", "Claude Sonnet"],
-                        pricing: "มีฟรี / $20/เดือน",
-                        link: "https://bolt.new",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "v0 by Vercel",
-                        description: "สร้าง UI components React ด้วย AI",
-                        features: ["React components", "Shadcn/ui", "Production ready", "Vercel"],
-                        pricing: "200 credits/เดือน ฟรี / $20/เดือน",
-                        link: "https://v0.dev",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Codia AI",
-                        description: "⭐ Figma/Screenshot เป็นโค้ด + NoteSlide แปลง NotebookLM PDF เป็น PPT!",
-                        features: ["Figma to code", "Screenshot to code", "NotebookLM to PPT", "10 วินาที"],
-                        pricing: "มีฟรี / $16-50/เดือน",
-                        link: "https://codia.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: true
-                    },
-                    {
-                        name: "Replit",
-                        description: "เขียนโค้ด + Deploy ในที่เดียว Ghostwriter AI",
-                        features: ["Code + Deploy", "Ghostwriter AI", "Instant deployment", "Collaboration"],
-                        pricing: "มีฟรี / $20/เดือน",
-                        link: "https://replit.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    }
+                    { name: "Cursor", description: "AI-first IDE แชทกับโค้ดได้ แก้ไขหลายไฟล์ Composer mode", features: ["AI-first IDE", "Composer", "Multi-file", "Claude + GPT-4o"], pricing: "2,000 completions ฟรี / $20/เดือน", link: "https://cursor.com", type: "freemium", region: "global", hot: true },
+                    { name: "GitHub Copilot", description: "มาตรฐานอุตสาหกรรม AI code completion Copilot Workspace", features: ["Code completion", "Multiple languages", "Copilot Chat", "GitHub integration"], pricing: "ฟรีนักเรียน / $10-19/เดือน", link: "https://github.com/features/copilot", type: "freemium", region: "global", hot: false },
+                    { name: "Windsurf", description: "Cascade AI แก้ไขหลายไฟล์ Deep codebase understanding จาก Codeium", features: ["Cascade AI", "Multi-file", "Codebase search", "Free tier"], pricing: "มีฟรี / $15/เดือน", link: "https://codeium.com/windsurf", type: "freemium", region: "global", hot: true },
+                    { name: "Codeium", description: "ฟรีตลอดกาล! 70+ ภาษา IDE integration", features: ["70+ languages", "IDE integration", "Autocomplete", "Free forever"], pricing: "🆓 ฟรีไม่จำกัด", link: "https://codeium.com", type: "free", region: "global", hot: false },
+                    { name: "Bolt.new", description: "Full-stack ในเบราว์เซอร์ สร้างแอปทันที Deploy ได้เลย", features: ["Full-stack", "In-browser", "Deploy one-click", "Claude Sonnet"], pricing: "มีฟรี / $20/เดือน", link: "https://bolt.new", type: "freemium", region: "global", hot: true },
+                    { name: "v0 by Vercel", description: "สร้าง UI components React ด้วย AI ต่อ GitHub ได้", features: ["React components", "Shadcn/ui", "GitHub sync", "Vercel deploy"], pricing: "200 credits/เดือน ฟรี / $20/เดือน", link: "https://v0.dev", type: "freemium", region: "global", hot: false },
+                    { name: "Codia AI", description: "⭐ Figma/Screenshot เป็นโค้ด + NoteSlide แปลง NotebookLM PDF เป็น PPT!", features: ["Figma to code", "Screenshot to code", "NotebookLM to PPT", "10 วินาที"], pricing: "มีฟรี / $16-50/เดือน", link: "https://codia.ai", type: "freemium", region: "global", hot: true },
+                    { name: "Replit", description: "เขียนโค้ด + Deploy ในที่เดียว Ghostwriter AI", features: ["Code + Deploy", "Ghostwriter AI", "Instant deployment", "Collaboration"], pricing: "มีฟรี / $20/เดือน", link: "https://replit.com", type: "freemium", region: "global", hot: false },
+                    { name: "Claude Code", description: "⚡ Agentic coding ใน terminal Claude โค้ดทั้งโปรเจคได้", features: ["Terminal-based", "Agentic coding", "Whole codebase", "Tool use"], pricing: "$20/เดือน (Claude Pro)", link: "https://claude.ai/code", type: "paid", region: "global", hot: true },
+                    { name: "Amazon Q Developer", description: "AWS AI coding ใน IDE ฟรีจาก Amazon", features: ["AWS integration", "Code completion", "Security scan", "Free tier"], pricing: "🆓 ฟรี / $19/เดือน Pro", link: "https://aws.amazon.com/q/developer", type: "freemium", region: "global", hot: false },
+                    { name: "Tabnine", description: "AI code completion ส่วนตัว ทำงาน offline ได้ Enterprise", features: ["Private deployment", "Offline mode", "Multi-model", "Enterprise"], pricing: "ฟรีจำกัด / $12-39/user", link: "https://tabnine.com", type: "freemium", region: "global", hot: false },
+                    { name: "Cline (Claude in VSCode)", description: "Extension VSCode ให้ Claude โค้ดแบบ agentic ฟรี", features: ["VSCode extension", "Agentic", "File editing", "Terminal access"], pricing: "🆓 ฟรี (ใช้ API ของตัวเอง)", link: "https://github.com/cline/cline", type: "free", region: "global", hot: true },
+                    { name: "Lovable", description: "สร้าง full-stack web app จาก prompt ภาษาธรรมดา", features: ["Full-stack gen", "Supabase integration", "React", "Real-time preview"], pricing: "5 messages ฟรี / $20/เดือน", link: "https://lovable.dev", type: "freemium", region: "global", hot: true },
+                    { name: "Tempo Labs", description: "สร้าง React UI แบบ AI-powered พร้อม Figma import", features: ["React UI builder", "Figma import", "Components library", "Visual editor"], pricing: "มีฟรี / $50/เดือน", link: "https://tempo.new", type: "freemium", region: "global", hot: false },
+                    { name: "Aider", description: "AI pair programming ใน terminal open source ฟรี", features: ["Terminal-based", "Open source", "Git integration", "Multiple models"], pricing: "🆓 ฟรี (ใช้ API ของตัวเอง)", link: "https://aider.chat", type: "free", region: "global", hot: false },
+                    { name: "Devin", description: "AI Software Engineer ทำงานทั้งโปรเจคได้อัตโนมัติ", features: ["Full software engineer", "Autonomous", "GitHub PR", "Bug fixing"], pricing: "$500/เดือน (ACUs)", link: "https://cognition.ai/devin", type: "paid", region: "global", hot: false },
+                    { name: "SWE-agent", description: "AI agent แก้ไข GitHub issues อัตโนมัติ open source", features: ["GitHub issues", "Open source", "Automated PR", "Claude/GPT"], pricing: "🆓 ฟรี (self-hosted)", link: "https://swe-agent.com", type: "free", region: "global", hot: false },
+                    { name: "Continue.dev", description: "Open source AI coding ใน VSCode/JetBrains self-host", features: ["Open source", "VSCode + JetBrains", "Self-hosted", "Any LLM"], pricing: "🆓 ฟรีไม่จำกัด", link: "https://continue.dev", type: "free", region: "global", hot: false },
+                    { name: "CodeRabbit", description: "AI code review pull request อัตโนมัติ GitHub/GitLab", features: ["PR review", "Security check", "GitHub integration", "Code quality"], pricing: "ฟรี OSS / $12/user/เดือน", link: "https://coderabbit.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Pieces for Developers", description: "บันทึก code snippets AI ค้นหา context จาก workflow", features: ["Snippet management", "Context AI", "IDE plugins", "Offline AI"], pricing: "🆓 ฟรี / $10/เดือน Pro", link: "https://pieces.app", type: "freemium", region: "global", hot: false },
+                    { name: "Sourcegraph Cody", description: "เข้าใจ codebase ทั้งหมด context-aware AI", features: ["Codebase context", "Enterprise ready", "IDE plugin", "Multi-model"], pricing: "ฟรีจำกัด / $9-19/เดือน", link: "https://sourcegraph.com/cody", type: "freemium", region: "global", hot: false },
+                    { name: "Warp Terminal", description: "Terminal AI ในตัว ถามคำสั่งได้ AI Command search", features: ["AI terminal", "Command search", "Modern UI", "Collaboration"], pricing: "🆓 ฟรี / $19/เดือน", link: "https://warp.dev", type: "freemium", region: "global", hot: false },
+                    { name: "Eraser.io", description: "แผนผัง diagram เขียน code as diagram AI-assisted", features: ["Diagram as code", "Architecture diagrams", "AI gen", "Team collaboration"], pricing: "3 docs ฟรี / $8-25/เดือน", link: "https://eraser.io", type: "freemium", region: "global", hot: false },
+                    { name: "Phind", description: "AI search engine สำหรับ developer ค้นหาโค้ดได้เรียลไทม์", features: ["Developer search", "Code answers", "Real-time web", "GPT-4o"], pricing: "ฟรี / $17/เดือน", link: "https://phind.com", type: "freemium", region: "global", hot: false },
+                    { name: "Refact.ai", description: "AI code completion + chat self-hostable", features: ["Self-hostable", "Code completion", "Chat", "Privacy-first"], pricing: "🆓 ฟรี self-host / $10/เดือน cloud", link: "https://refact.ai", type: "freemium", region: "global", hot: false }
+                ]
+            },
+            "translation": {
+                title: "แปลภาษาและสื่อสาร",
+                icon: "🌍",
+                tools: [
+                    { name: "DeepL", description: "แปลภาษาคุณภาพสูงสุด 30+ ภาษา AI neural", features: ["Neural translation", "30+ languages", "Document translation", "Glossary"], pricing: "500K chars/เดือน ฟรี / $9-30/เดือน", link: "https://deepl.com", type: "freemium", region: "global", hot: true },
+                    { name: "Google Translate", description: "แปลภาษาฟรี 133 ภาษา real-time camera", features: ["133 languages", "Camera translate", "Conversation mode", "Free"], pricing: "🆓 ฟรี", link: "https://translate.google.com", type: "free", region: "global", hot: false },
+                    { name: "Microsoft Translator", description: "แปลภาษา 100+ ภาษา offline ได้ API", features: ["100+ languages", "Offline mode", "Speech translation", "API"], pricing: "🆓 ฟรี / API pricing", link: "https://translator.microsoft.com", type: "freemium", region: "global", hot: false },
+                    { name: "Papago", description: "แปลภาษาเอเชีย เกาหลี ญี่ปุ่น จีน ไทย แม่นยำ Naver", features: ["Asian languages", "Korean", "Japanese", "Thai", "Naver AI"], pricing: "🆓 ฟรี", link: "https://papago.naver.com", type: "free", region: "global", hot: false },
+                    { name: "iTranslate", description: "แปลและออกเสียง 100+ ภาษา conversation mode", features: ["100+ languages", "Voice translation", "Conversation", "Offline"], pricing: "ฟรีจำกัด / $8/เดือน", link: "https://itranslate.com", type: "freemium", region: "global", hot: false },
+                    { name: "Lokalise AI", description: "แปลเอกสาร software localization AI ทีม", features: ["Software localization", "Team workflow", "API", "Batch translate"], pricing: "$120+/เดือน", link: "https://lokalise.com", type: "paid", region: "global", hot: false },
+                    { name: "Smartling", description: "Enterprise translation management AI workflow", features: ["Enterprise TMS", "Neural MT", "Quality AI", "Workflow"], pricing: "Enterprise", link: "https://smartling.com", type: "paid", region: "global", hot: false },
+                    { name: "Transifex", description: "Localization platform AI translation software/apps", features: ["App localization", "AI translation", "Git integration", "API"], pricing: "250K words ฟรี / $90+/เดือน", link: "https://transifex.com", type: "freemium", region: "global", hot: false },
+                    { name: "Lingvanex", description: "แปลภาษา 109 ภาษา on-premise ได้ privacy", features: ["109 languages", "On-premise", "API", "Offline"], pricing: "ฟรีจำกัด / $3-40/เดือน", link: "https://lingvanex.com", type: "freemium", region: "global", hot: false },
+                    { name: "Reverso", description: "แปล ดูบริบทประโยค เรียนคำศัพท์ conjugation", features: ["Translation", "Context examples", "Conjugation", "Vocabulary"], pricing: "🆓 ฟรีพื้นฐาน / $10/เดือน", link: "https://reverso.net", type: "freemium", region: "global", hot: false },
+                    { name: "Pairaphrase", description: "แปลเอกสาร PDF Word Excel AI รักษา format", features: ["Document translation", "Format preservation", "200+ languages", "TM"], pricing: "Enterprise", link: "https://pairaphrase.com", type: "paid", region: "global", hot: false },
+                    { name: "EzDubs", description: "แปลและพากย์เสียง video real-time AI dubbing", features: ["Video dubbing", "Real-time", "Voice preservation", "Multiple languages"], pricing: "มีฟรี / มี Pro", link: "https://ezdubs.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Rask AI", description: "แปลและพากย์เสียงวิดีโอ AI 130+ ภาษา", features: ["Video translation", "AI dubbing", "130+ languages", "Voice cloning"], pricing: "ฟรีจำกัด / $60-140/เดือน", link: "https://rask.ai", type: "freemium", region: "global", hot: false },
+                    { name: "HeyGen AI Translation", description: "แปลวิดีโอ รักษา lip sync เสียงต้นฉบับ", features: ["Video translation", "Lip sync", "Voice preservation", "100+ languages"], pricing: "1 นาทีฟรี / $24-360/เดือน", link: "https://heygen.com", type: "freemium", region: "global", hot: true },
+                    { name: "Sonix", description: "ถอดความ แปล จัดการ transcript ด้วย AI", features: ["Transcription", "Translation", "Subtitles", "Multi-language"], pricing: "$22/ชั่วโมง / $22-220/เดือน", link: "https://sonix.ai", type: "paid", region: "global", hot: false }
+                ]
+            },
+            "data": {
+                title: "Data Analytics และ BI",
+                icon: "📈",
+                tools: [
+                    { name: "Tableau AI", description: "Business intelligence + AI insights data viz", features: ["AI insights", "Natural language", "Dashboards", "Einstein Discovery"], pricing: "$15-75/user/เดือน", link: "https://tableau.com", type: "paid", region: "global", hot: false },
+                    { name: "Power BI Copilot", description: "Microsoft BI + Copilot AI ถาม data ภาษาธรรมดา", features: ["Copilot AI", "Natural language", "DAX generation", "Report AI"], pricing: "$10-20/user/เดือน", link: "https://powerbi.microsoft.com", type: "paid", region: "global", hot: false },
+                    { name: "Looker (Google)", description: "Data platform AI analytics business insight", features: ["Data modeling", "AI insights", "Embedded analytics", "Google integration"], pricing: "Enterprise", link: "https://lookerstudio.google.com", type: "freemium", region: "global", hot: false },
+                    { name: "ThoughtSpot", description: "Search-based analytics AI ถาม data ได้เลย", features: ["Natural language search", "AI insights", "Liveboard", "SpotIQ"], pricing: "Enterprise / Team $95/user", link: "https://thoughtspot.com", type: "paid", region: "global", hot: false },
+                    { name: "Julius AI", description: "Chat กับ spreadsheet data analysis สร้างกราฟ Python", features: ["Chat data", "Python exec", "Visualizations", "Spreadsheet AI"], pricing: "15 messages ฟรี / $20/เดือน", link: "https://julius.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Polymer", description: "แปลง spreadsheet เป็น interactive dashboard ง่าย", features: ["Spreadsheet to dashboard", "AI insights", "Share", "Embed"], pricing: "ฟรีจำกัด / $20-60/เดือน", link: "https://polymersearch.com", type: "freemium", region: "global", hot: false },
+                    { name: "Equals", description: "Spreadsheet + SQL + AI ใน workbook เดียว", features: ["SQL in spreadsheet", "AI formulas", "Charts", "Collaboration"], pricing: "ฟรีจำกัด / $16/เดือน", link: "https://equals.com", type: "freemium", region: "global", hot: false },
+                    { name: "Hex", description: "Data notebooks collaborative SQL Python AI", features: ["SQL + Python", "AI magic", "Collaboration", "Publish apps"], pricing: "ฟรีจำกัด / $24/user/เดือน", link: "https://hex.tech", type: "freemium", region: "global", hot: false },
+                    { name: "Observable", description: "Data visualization JavaScript notebook AI", features: ["D3.js", "Observable Plot", "AI assist", "Collaboration"], pricing: "ฟรีพื้นฐาน / $9-25/เดือน", link: "https://observablehq.com", type: "freemium", region: "global", hot: false },
+                    { name: "Metabase", description: "Open source BI dashboard SQL AI ง่ายใช้", features: ["Open source", "SQL AI", "Dashboards", "Self-host"], pricing: "🆓 ฟรี self-host / $85+/เดือน", link: "https://metabase.com", type: "freemium", region: "global", hot: false },
+                    { name: "Retool AI", description: "สร้าง internal tools + AI features รวดเร็ว", features: ["Internal tools", "AI components", "Database connect", "Custom apps"], pricing: "5 users ฟรี / $10-50/user", link: "https://retool.com", type: "freemium", region: "global", hot: false },
+                    { name: "Databricks AI", description: "Unified data analytics + ML platform Lakehouse", features: ["Lakehouse", "MLflow", "DBRX", "Delta Lake"], pricing: "Pay-per-use DBU", link: "https://databricks.com", type: "freemium", region: "global", hot: false },
+                    { name: "DataRobot", description: "AutoML enterprise AI platform prediction", features: ["AutoML", "Automated AI", "MLOps", "Enterprise"], pricing: "Enterprise / Free trial", link: "https://datarobot.com", type: "freemium", region: "global", hot: false },
+                    { name: "Obviously AI", description: "No-code ML prediction spreadsheet data", features: ["No-code ML", "Prediction", "CSV input", "API"], pricing: "$75-750/เดือน", link: "https://obviously.ai", type: "paid", region: "global", hot: false },
+                    { name: "Bardeen (Data)", description: "Auto scrape websites export to spreadsheet AI", features: ["Web scraping", "Auto-extract", "CRM sync", "Spreadsheet"], pricing: "500 credits ฟรี / $10/เดือน", link: "https://bardeen.ai", type: "freemium", region: "global", hot: false }
+                ]
+            },
+            "security": {
+                title: "Security และ Privacy",
+                icon: "🔐",
+                tools: [
+                    { name: "Darktrace", description: "AI cybersecurity ตรวจจับ threats real-time autonomous", features: ["AI threat detection", "Autonomous response", "Cloud security", "Email AI"], pricing: "Enterprise", link: "https://darktrace.com", type: "paid", region: "global", hot: false },
+                    { name: "CrowdStrike AI", description: "AI endpoint security threat intelligence Charlotte AI", features: ["Endpoint AI", "Charlotte AI", "Threat intel", "XDR"], pricing: "$150+/user/ปี", link: "https://crowdstrike.com", type: "paid", region: "global", hot: false },
+                    { name: "SentinelOne Purple AI", description: "AI security analyst ถาม incident ภาษาธรรมดา", features: ["Purple AI", "Natural language", "Threat hunting", "Autonomous"], pricing: "Enterprise", link: "https://sentinelone.com", type: "paid", region: "global", hot: false },
+                    { name: "Microsoft Security Copilot", description: "AI security analyst 65 trillion signals/วัน", features: ["Security AI", "Incident summary", "Threat intel", "Script analysis"], pricing: "$4/SCU/ชั่วโมง", link: "https://microsoft.com/security/copilot", type: "paid", region: "global", hot: false },
+                    { name: "Palo Alto Cortex XSIAM", description: "AI-driven security operations platform", features: ["AI SOC", "Threat correlation", "Automated response", "SIEM+SOAR"], pricing: "Enterprise", link: "https://paloaltonetworks.com/cortex/xsiam", type: "paid", region: "global", hot: false },
+                    { name: "Abnormal Security", description: "AI email security ป้องกัน phishing BEC", features: ["Email AI", "Phishing detection", "BEC protection", "Behavioral AI"], pricing: "Enterprise", link: "https://abnormalsecurity.com", type: "paid", region: "global", hot: false },
+                    { name: "Snyk AI", description: "AI code security สแกน vulnerabilities fix", features: ["Code scanning", "AI fix", "Container security", "GitHub integration"], pricing: "ฟรีพื้นฐาน / $25/เดือน", link: "https://snyk.io", type: "freemium", region: "global", hot: false },
+                    { name: "GitGuardian", description: "ตรวจ secrets keys ใน code repository AI", features: ["Secret detection", "Git scanning", "Real-time alerts", "Remediation"], pricing: "5 devs ฟรี / $25+/เดือน", link: "https://gitguardian.com", type: "freemium", region: "global", hot: false },
+                    { name: "Orca Security", description: "Cloud security AI ตรวจ misconfigurations risks", features: ["Cloud security", "AI insights", "Agentless", "Risk prioritization"], pricing: "Enterprise", link: "https://orca.security", type: "paid", region: "global", hot: false },
+                    { name: "NightVision", description: "AI pentest automation web app scanning", features: ["AI pentest", "Web app scan", "API testing", "CI/CD integration"], pricing: "ฟรีจำกัด / $35/เดือน", link: "https://nightvision.net", type: "freemium", region: "global", hot: false },
+                    { name: "Protect AI", description: "ML security platform scan AI/ML vulnerabilities", features: ["ML security", "Model scanning", "Supply chain", "Governance"], pricing: "Enterprise", link: "https://protectai.com", type: "paid", region: "global", hot: false },
+                    { name: "Arize AI", description: "ML observability monitor AI models production", features: ["Model monitoring", "Drift detection", "Explainability", "LLM tracing"], pricing: "ฟรีจำกัด / $200+/เดือน", link: "https://arize.com", type: "freemium", region: "global", hot: false },
+                    { name: "Lakera Guard", description: "Protect LLM apps จาก prompt injection attacks", features: ["Prompt injection", "LLM security", "API protection", "Real-time"], pricing: "Free tier / Enterprise", link: "https://lakera.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Wiz", description: "Cloud security AI ค้นหา vulnerabilities ทุก cloud", features: ["Multi-cloud security", "AI prioritization", "Agentless", "CNAPP"], pricing: "Enterprise", link: "https://wiz.io", type: "paid", region: "global", hot: false },
+                    { name: "Securiti.ai", description: "AI data governance privacy security compliance", features: ["Data governance", "Privacy AI", "Compliance automation", "DSR"], pricing: "Enterprise", link: "https://securiti.ai", type: "paid", region: "global", hot: false },
+                    { name: "Vectra AI", description: "AI threat detection network cloud identity", features: ["Network detection", "Cloud security", "Identity threats", "XDR"], pricing: "Enterprise", link: "https://vectra.ai", type: "paid", region: "global", hot: false },
+                    { name: "Tessian", description: "AI email security ป้องกัน data loss phishing", features: ["Email DLP", "Phishing AI", "Behavioral AI", "Human layer"], pricing: "Enterprise", link: "https://tessian.com", type: "paid", region: "global", hot: false },
+                    { name: "Prompt Security", description: "Firewall สำหรับ GenAI apps ป้องกัน LLM attacks", features: ["GenAI firewall", "Prompt injection", "Data leakage", "Compliance"], pricing: "Enterprise", link: "https://prompt.security", type: "paid", region: "global", hot: false },
+                    { name: "Private AI", description: "PII detection redaction API สำหรับ AI privacy", features: ["PII detection", "Data masking", "50+ languages", "API"], pricing: "ฟรีจำกัด / $500+/เดือน", link: "https://private-ai.com", type: "freemium", region: "global", hot: false },
+                    { name: "Nightfall AI", description: "Cloud DLP ตรวจ sensitive data ใน SaaS AI", features: ["Cloud DLP", "SaaS scanning", "AI detection", "Remediation"], pricing: "Enterprise", link: "https://nightfall.ai", type: "paid", region: "global", hot: false },
+                    { name: "Merlin Security", description: "AI-powered application security testing DAST", features: ["DAST", "AI testing", "API security", "CI/CD"], pricing: "ฟรีจำกัด / $50+/เดือน", link: "https://merlin.security", type: "freemium", region: "global", hot: false },
+                    { name: "DeepFace", description: "Facial analysis recognition AI Python open source", features: ["Face recognition", "Emotion detection", "Age/gender", "Open source"], pricing: "🆓 ฟรี open source", link: "https://github.com/serengil/deepface", type: "free", region: "global", hot: false },
+                    { name: "Bitwarden AI", description: "Password manager + AI security analysis", features: ["Password manager", "Security report", "AI suggestions", "Open source"], pricing: "🆓 ฟรี / $10/ปี Premium", link: "https://bitwarden.com", type: "freemium", region: "global", hot: false }
+                ]
+            },
+            "chinese_ai": {
+                title: "AI จีน Special Edition",
+                icon: "🇨🇳",
+                tools: [
+                    { name: "Manus AI", description: "⚡ General AI agent จีน ทำงาน task ซับซ้อนได้อัตโนมัติ", features: ["Autonomous agent", "Research", "Coding", "Data analysis"], pricing: "Invite only / Beta", link: "https://manus.im", type: "freemium", region: "chinese", hot: true },
+                    { name: "Janus Pro", description: "DeepSeek multi-modal image understanding + generation", features: ["Image generation", "Image understanding", "Open source", "DeepSeek"], pricing: "🆓 ฟรี open source", link: "https://github.com/deepseek-ai/Janus", type: "free", region: "chinese", hot: true },
+                    { name: "CogVideoX", description: "Zhipu AI สร้างวิดีโอคุณภาพสูง open source", features: ["Video generation", "Open source", "High quality", "Commercial use"], pricing: "🆓 ฟรี open source", link: "https://github.com/THUDM/CogVideo", type: "free", region: "chinese", hot: false },
+                    { name: "Kolors", description: "Kuaishou AI image generation คุณภาพสูง", features: ["High quality", "Style control", "Realistic", "Chinese"], pricing: "🆓 ฟรี (API)", link: "https://kwaikolors.com", type: "free", region: "chinese", hot: false },
+                    { name: "StepFun (阶跃星辰)", description: "AI โมเดล Step-2 จีน multi-modal", features: ["Step-2", "Multi-modal", "Long context", "Chinese AI"], pricing: "🆓 ฟรี / มี API", link: "https://stepfun.com", type: "freemium", region: "chinese", hot: false },
+                    { name: "MiniMax", description: "Hailuo parent company AI model ภาษาและวิดีโอ", features: ["Language model", "Video AI", "TTS", "Enterprise"], pricing: "ฟรีจำกัด / API pricing", link: "https://minimax.chat", type: "freemium", region: "chinese", hot: false },
+                    { name: "Kuaiwan (快问)", description: "AI search จาก Kuaishou เรียลไทม์ video search", features: ["AI search", "Video search", "Real-time", "Chinese"], pricing: "🆓 ฟรี", link: "https://www.kuaishou.com", type: "free", region: "chinese", hot: false },
+                    { name: "360 AI", description: "360 Security AI assistant ค้นหาและวิเคราะห์", features: ["AI search", "Security AI", "Chinese NLP", "360 ecosystem"], pricing: "🆓 ฟรี", link: "https://ai.360.com", type: "free", region: "chinese", hot: false },
+                    { name: "Baichuan AI", description: "Enterprise AI จีน Baichuan3 ภาษาจีนเก่ง", features: ["Baichuan3", "Chinese NLP", "Long context", "Enterprise"], pricing: "API pricing", link: "https://www.baichuan-ai.com", type: "freemium", region: "chinese", hot: false },
+                    { name: "Yi (零一万物)", description: "01.AI Yi-Large context ยาว multi-modal", features: ["Yi-Large", "Long context", "Multi-modal", "Open source"], pricing: "ฟรีจำกัด / API pricing", link: "https://01.ai", type: "freemium", region: "chinese", hot: false },
+                    { name: "Taichu (太初)", description: "Chinese Academy AI multi-modal generation", features: ["Multi-modal", "Research", "Chinese Academy", "Scientific"], pricing: "API access", link: "https://taichu-web.ia.ac.cn", type: "freemium", region: "chinese", hot: false },
+                    { name: "Kunlun AI", description: "Kunlun Tech AI assistant ค้นหาและสร้างเนื้อหา", features: ["Search AI", "Content gen", "Chinese", "Multi-modal"], pricing: "ฟรี / มี Pro", link: "https://tiangong.cn", type: "freemium", region: "chinese", hot: false },
+                    { name: "Spark (讯飞星火)", description: "iFlytek AI ภาษาจีนดีมาก เขียนโค้ด วิเคราะห์", features: ["Spark 4.0", "Code gen", "Voice AI", "iFlytek"], pricing: "🆓 ฟรีจำกัด / มี Pro", link: "https://xinghuo.xfyun.cn", type: "freemium", region: "chinese", hot: false },
+                    { name: "Wan 2.1 (万象)", description: "Alibaba video generation model open source", features: ["Open source", "Video gen", "I2V", "T2V", "720p"], pricing: "🆓 ฟรี open source", link: "https://wan.video", type: "free", region: "chinese", hot: true },
+                    { name: "SenseNova (日日新)", description: "SenseTime AI enterprise multi-modal platform", features: ["Enterprise AI", "Multi-modal", "Chinese", "Vision AI"], pricing: "Enterprise / API", link: "https://platform.sensenova.cn", type: "freemium", region: "chinese", hot: false }
                 ]
             },
             "presentation": {
                 title: "เอกสารและนำเสนอ",
                 icon: "📊",
                 tools: [
-                    {
-                        name: "Gamma",
-                        description: "Text to Presentation ที่ดีที่สุด! สวยงามและใช้ง่าย",
-                        features: ["Text to slides", "Beautiful templates", "Interactive cards", "AI generation"],
-                        pricing: "400 credits ฟรี / $10-20/เดือน",
-                        link: "https://gamma.app",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Tome",
-                        description: "รูปแบบเล่าเรื่อง AI layouts สร้างภาพในตัว",
-                        features: ["Storytelling format", "AI layouts", "Image generation", "Beautiful design"],
-                        pricing: "500 credits ฟรี / $10-20/เดือน",
-                        link: "https://tome.app",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Beautiful.ai",
-                        description: "Template อัตโนมัติ ทำงานร่วมกันทีม Brand kit",
-                        features: ["Auto-formatting", "Team collaboration", "Brand kit", "Smart templates"],
-                        pricing: "3 โปรเจคฟรี / $12-50/เดือน",
-                        link: "https://beautiful.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Canva",
-                        description: "ดีไซน์ทุกอย่าง Template เยอะ AI ในตัว",
-                        features: ["Magic Design", "Magic Write", "Huge templates", "Easy to use"],
-                        pricing: "ฟรีพื้นฐาน / $13-40/เดือน",
-                        link: "https://canva.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Notion AI",
-                        description: "Workspace + AI ในตัว จดบันทึก จัดการงาน",
-                        features: ["Workspace + AI", "Writing assistant", "Q&A docs", "Collaboration"],
-                        pricing: "ฟรีพื้นฐาน / $10-15/เดือน",
-                        link: "https://notion.so",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Napkin AI",
-                        description: "Text to Infographic/Diagram อัตโนมัติ",
-                        features: ["Text to infographic", "Diagrams", "Flowcharts", "Visual storytelling"],
-                        pricing: "10 exports/เดือน ฟรี / $10-20/เดือน",
-                        link: "https://napkin.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    }
+                    { name: "Gamma", description: "Text to Presentation ที่ดีที่สุด! สวยงามและใช้ง่าย AI decks", features: ["Text to slides", "Beautiful templates", "Interactive cards", "AI generation"], pricing: "400 credits ฟรี / $10-20/เดือน", link: "https://gamma.app", type: "freemium", region: "global", hot: true },
+                    { name: "Tome", description: "รูปแบบเล่าเรื่อง AI layouts สร้างภาพในตัว", features: ["Storytelling format", "AI layouts", "Image generation", "Beautiful design"], pricing: "500 credits ฟรี / $10-20/เดือน", link: "https://tome.app", type: "freemium", region: "global", hot: false },
+                    { name: "Beautiful.ai", description: "Template อัตโนมัติ ทำงานร่วมกันทีม Brand kit Smart slides", features: ["Auto-formatting", "Team collaboration", "Brand kit", "Smart templates"], pricing: "3 โปรเจคฟรี / $12-50/เดือน", link: "https://beautiful.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Canva", description: "ดีไซน์ทุกอย่าง Template เยอะ AI ในตัว Magic Studio", features: ["Magic Design", "Magic Write", "Huge templates", "Easy to use"], pricing: "ฟรีพื้นฐาน / $13-40/เดือน", link: "https://canva.com", type: "freemium", region: "global", hot: false },
+                    { name: "Notion AI", description: "Workspace + AI ในตัว จดบันทึก จัดการงาน Q&A", features: ["Workspace + AI", "Writing assistant", "Q&A docs", "Collaboration"], pricing: "ฟรีพื้นฐาน / $10-15/เดือน", link: "https://notion.so", type: "freemium", region: "global", hot: false },
+                    { name: "Napkin AI", description: "Text to Infographic/Diagram อัตโนมัติ flowchart", features: ["Text to infographic", "Diagrams", "Flowcharts", "Visual storytelling"], pricing: "10 exports/เดือน ฟรี / $10-20/เดือน", link: "https://napkin.ai", type: "freemium", region: "global", hot: false },
+                    { name: "SlidesAI", description: "สร้าง Google Slides จาก text อัตโนมัติ Extension", features: ["Google Slides", "Text to slides", "Templates", "Chrome extension"], pricing: "3 Presentations/เดือน ฟรี / $10-20/เดือน", link: "https://slidesai.io", type: "freemium", region: "global", hot: false },
+                    { name: "Presentations.ai", description: "สร้าง presentation จาก URL หรือ text ได้เลย", features: ["URL to slides", "Text to slides", "Design AI", "Export PPTX"], pricing: "ฟรีจำกัด / $10-25/เดือน", link: "https://presentations.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Pitch", description: "สร้าง pitch deck ร่วมมือทีม AI templates สวย", features: ["Team collaboration", "AI templates", "Analytics", "Embedding"], pricing: "ฟรีพื้นฐาน / $22-100+/เดือน", link: "https://pitch.com", type: "freemium", region: "global", hot: false },
+                    { name: "Decktopus", description: "สร้าง presentation ด้วย AI ง่ายมาก presenter notes", features: ["AI generation", "Presenter notes", "Form integration", "Analytics"], pricing: "ฟรีจำกัด / $15-35/เดือน", link: "https://decktopus.com", type: "freemium", region: "global", hot: false },
+                    { name: "Piktochart", description: "สร้าง infographic report visual content ง่าย", features: ["Infographics", "Reports", "Presentations", "Video"], pricing: "ฟรีพื้นฐาน / $15/เดือน", link: "https://piktochart.com", type: "freemium", region: "global", hot: false },
+                    { name: "Venngage", description: "Infographic diagrams report design AI-assisted", features: ["Infographics", "Diagrams", "Reports", "Brand kit"], pricing: "5 designs ฟรี / $10-29/เดือน", link: "https://venngage.com", type: "freemium", region: "global", hot: false },
+                    { name: "Miro AI", description: "Whiteboard ออนไลน์ AI brainstorm ทำงานทีม", features: ["AI brainstorm", "Mind maps", "Diagrams", "Team workshop"], pricing: "3 boards ฟรี / $8-16/เดือน", link: "https://miro.com", type: "freemium", region: "global", hot: false },
+                    { name: "FigJam", description: "Digital whiteboard จาก Figma AI brainstorm", features: ["Whiteboard", "AI generation", "Figma integration", "Templates"], pricing: "ฟรีพื้นฐาน / $5/เดือน", link: "https://figma.com/figjam", type: "freemium", region: "global", hot: false },
+                    { name: "Microsoft Designer", description: "AI design tool จาก Microsoft DALL-E 3 ใน Canva style", features: ["DALL-E 3", "Templates", "Office 365", "Social media"], pricing: "🆓 ฟรี", link: "https://designer.microsoft.com", type: "free", region: "global", hot: false },
+                    { name: "Prezi AI", description: "Presentation แบบ dynamic zooming AI สร้างเนื้อหา", features: ["Dynamic presentations", "AI content", "Zoom animations", "Video"], pricing: "ฟรีพื้นฐาน / $7-20/เดือน", link: "https://prezi.com", type: "freemium", region: "global", hot: false }
                 ]
             },
             "research": {
                 title: "วิเคราะห์และวิจัย",
                 icon: "🔬",
                 tools: [
-                    {
-                        name: "Perplexity Pro",
-                        description: "Search engine AI ที่ดีที่สุด! เรียลไทม์ มีอ้างอิง",
-                        features: ["Best AI search", "Real-time", "Citations", "Research mode", "File upload"],
-                        pricing: "5 Pro/วัน ฟรี / $20/เดือน",
-                        link: "https://www.perplexity.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "NotebookLM",
-                        description: "Google - ถาม-ตอบอิงแหล่งที่มา สร้างพอดแคสต์",
-                        features: ["Source-grounded", "Upload sources", "Q&A with citations", "Generate podcasts"],
-                        pricing: "🆓 ฟรีไม่จำกัด",
-                        link: "https://notebooklm.google.com",
-                        type: "free",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "ChatPDF",
-                        description: "สนทนากับ PDF หลายเอกสาร ดึงความรู้",
-                        features: ["Chat with PDFs", "Multi-document", "Extract insights", "Fast"],
-                        pricing: "120 หน้า/วัน ฟรี / $5-10/เดือน",
-                        link: "https://chatpdf.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Consensus",
-                        description: "ค้นหาบทความวิทยาศาสตร์ AI summaries",
-                        features: ["Scientific papers", "AI summaries", "Citation quality", "Research"],
-                        pricing: "20 searches/เดือน ฟรี / $9-25/เดือน",
-                        link: "https://consensus.app",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Elicit",
-                        description: "ผู้ช่วยวิจัย รีวิวเอกสาร ดึงข้อมูล",
-                        features: ["Research assistant", "Literature review", "Extract data", "Academic"],
-                        pricing: "มีฟรี / $10-42/เดือน",
-                        link: "https://elicit.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Julius AI",
-                        description: "วิเคราะห์ข้อมูล สนทนากับ spreadsheet สร้างกราฟ",
-                        features: ["Data analysis", "Chat with spreadsheets", "Visualizations", "Python"],
-                        pricing: "15 messages/เดือน ฟรี / $20/เดือน",
-                        link: "https://julius.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    }
+                    { name: "Perplexity Pro", description: "Search engine AI ที่ดีที่สุด! เรียลไทม์ มีอ้างอิง Deep Research", features: ["Best AI search", "Real-time", "Citations", "Deep Research", "File upload"], pricing: "5 Pro/วัน ฟรี / $20/เดือน", link: "https://www.perplexity.ai", type: "freemium", region: "global", hot: true },
+                    { name: "NotebookLM", description: "Google - ถาม-ตอบอิงแหล่งที่มา สร้างพอดแคสต์ Mind maps", features: ["Source-grounded", "Upload sources", "Q&A with citations", "Generate podcasts", "Mind maps"], pricing: "🆓 ฟรีไม่จำกัด", link: "https://notebooklm.google.com", type: "free", region: "global", hot: true },
+                    { name: "ChatPDF", description: "สนทนากับ PDF หลายเอกสาร ดึงความรู้", features: ["Chat with PDFs", "Multi-document", "Extract insights", "Fast"], pricing: "120 หน้า/วัน ฟรี / $5-10/เดือน", link: "https://chatpdf.com", type: "freemium", region: "global", hot: false },
+                    { name: "Consensus", description: "ค้นหาบทความวิทยาศาสตร์ AI summaries evidence-based", features: ["Scientific papers", "AI summaries", "Citation quality", "Evidence synthesis"], pricing: "20 searches/เดือน ฟรี / $9-25/เดือน", link: "https://consensus.app", type: "freemium", region: "global", hot: false },
+                    { name: "Elicit", description: "ผู้ช่วยวิจัย รีวิวเอกสาร ดึงข้อมูล systematic review", features: ["Research assistant", "Literature review", "Extract data", "Systematic review"], pricing: "มีฟรี / $10-42/เดือน", link: "https://elicit.com", type: "freemium", region: "global", hot: false },
+                    { name: "Julius AI", description: "วิเคราะห์ข้อมูล สนทนากับ spreadsheet สร้างกราฟ Python", features: ["Data analysis", "Chat with spreadsheets", "Visualizations", "Python"], pricing: "15 messages/เดือน ฟรี / $20/เดือน", link: "https://julius.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Semantic Scholar", description: "ค้นหา paper งานวิจัย AI-powered free academic", features: ["Academic papers", "Citation graph", "TL;DR summaries", "Free"], pricing: "🆓 ฟรี", link: "https://semanticscholar.org", type: "free", region: "global", hot: false },
+                    { name: "Research Rabbit", description: "ค้นหา papers เชิงเครือข่าย เชื่อมต่อ Zotero", features: ["Network visualization", "Related papers", "Zotero sync", "Collections"], pricing: "🆓 ฟรี", link: "https://researchrabbitapp.com", type: "free", region: "global", hot: false },
+                    { name: "SciSpace (Typeset)", description: "อ่านวิเคราะห์ papers AI chat ถาม-ตอบ AI reviewer", features: ["Paper chat", "AI review", "Literature review", "Citation assistant"], pricing: "5 AI ครั้ง/วัน ฟรี / $12-20/เดือน", link: "https://scispace.com", type: "freemium", region: "global", hot: false },
+                    { name: "Connected Papers", description: "แผนผัง visual ความเชื่อมโยงระหว่าง papers", features: ["Visual graph", "Paper connections", "Explore field", "Prior work"], pricing: "5 graphs/เดือน ฟรี / $6-12/เดือน", link: "https://connectedpapers.com", type: "freemium", region: "global", hot: false },
+                    { name: "Explainpaper", description: "อัปโหลด paper ขอให้ AI อธิบาย term ยากๆ", features: ["Paper explanation", "Highlight & explain", "GPT-4", "Student-friendly"], pricing: "มีฟรี / $12/เดือน", link: "https://explainpaper.com", type: "freemium", region: "global", hot: false },
+                    { name: "Mendeley", description: "จัดการ reference งานวิจัย AI ช่วยแนะนำ papers", features: ["Reference manager", "Paper recommendations", "Citation generator", "Collaboration"], pricing: "🆓 ฟรี / มี Premium", link: "https://mendeley.com", type: "freemium", region: "global", hot: false },
+                    { name: "Litmaps", description: "แผนที่วรรณกรรม papers timeline visual", features: ["Literature mapping", "Timeline view", "Discovery", "Alerts"], pricing: "ฟรีจำกัด / $10/เดือน", link: "https://litmaps.com", type: "freemium", region: "global", hot: false },
+                    { name: "Undermind", description: "Deep research AI ค้นหา papers ที่ relevant ที่สุด", features: ["Deep search", "Relevance ranking", "AI summary", "Expert-level"], pricing: "3 queries ฟรี / $20/เดือน", link: "https://undermind.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Storm (Stanford)", description: "Stanford AI สร้างบทความ Wikipedia-style จาก internet", features: ["Long-form article", "Multi-source", "Citations", "Free"], pricing: "🆓 ฟรี", link: "https://storm.genie.stanford.edu", type: "free", region: "global", hot: false },
+                    { name: "Gemini Deep Research", description: "Google AI วิจัยเชิงลึก multi-step สร้าง report", features: ["Multi-step research", "Web browsing", "Detailed report", "Gemini 2.5"], pricing: "$20/เดือน (Gemini Advanced)", link: "https://gemini.google.com", type: "paid", region: "global", hot: true },
+                    { name: "ChatGPT Deep Research", description: "OpenAI วิจัยลึก 30+ แหล่ง สร้าง report", features: ["30+ sources", "Multi-step", "Full report", "Citations"], pricing: "$20/เดือน (ChatGPT Plus)", link: "https://chatgpt.com", type: "paid", region: "global", hot: true },
+                    { name: "Lumina Chat", description: "Chat กับ PDF งานวิจัย multi-document AI", features: ["Multi-PDF", "Semantic search", "Citations", "Comparison"], pricing: "10 PDFs ฟรี / $14/เดือน", link: "https://lumina.sh", type: "freemium", region: "global", hot: false },
+                    { name: "Unriddle", description: "สร้าง AI จาก documents ของตัวเอง ถาม-ตอบได้", features: ["Custom knowledge base", "Chat with docs", "Citation tracking", "Highlights"], pricing: "ฟรีจำกัด / $16/เดือน", link: "https://unriddle.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Humata", description: "สนทนากับ documents AI summarize compare", features: ["Document Q&A", "Summarize", "Compare docs", "Enterprise"], pricing: "60 หน้า ฟรี / $14-100/เดือน", link: "https://humata.ai", type: "freemium", region: "global", hot: false }
                 ]
             },
             "productivity": {
                 title: "ผลิตภาพและอัตโนมัติ",
                 icon: "⚡",
                 tools: [
-                    {
-                        name: "Zapier AI",
-                        description: "Automation 6,000+ integrations AI chatbots",
-                        features: ["6,000+ apps", "Natural language", "AI chatbots", "Workflows"],
-                        pricing: "100 tasks/เดือน ฟรี / $20-400/เดือน",
-                        link: "https://zapier.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Otter.ai",
-                        description: "ถอดความประชุมเรียลไทม์ สรุปด้วย AI",
-                        features: ["Real-time transcription", "AI summaries", "Zoom integration", "Action items"],
-                        pricing: "300 นาที/เดือน ฟรี / $17-30/เดือน",
-                        link: "https://otter.ai",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Motion",
-                        description: "AI calendar + task บริหารเวลาอัตโนมัติ",
-                        features: ["AI calendar", "Task scheduling", "Calendar management", "Project planning"],
-                        pricing: "7 วันทดลอง / $19-34/เดือน",
-                        link: "https://usemotion.com",
-                        type: "paid",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Notion AI",
-                        description: "Workspace + AI จัดการงาน จดบันทึก",
-                        features: ["Workspace", "AI writing", "Q&A docs", "Collaboration"],
-                        pricing: "ฟรีพื้นฐาน / $10-15/เดือน",
-                        link: "https://notion.so",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    },
-                    {
-                        name: "Grammarly",
-                        description: "ตรวจแก้ไขภาษา เขียนได้ดีขึ้น",
-                        features: ["Grammar check", "Tone detector", "Clarity", "Writing assistant"],
-                        pricing: "ฟรีพื้นฐาน / $12/เดือน",
-                        link: "https://grammarly.com",
-                        type: "freemium",
-                        region: "global",
-                        hot: false
-                    }
+                    { name: "Zapier AI", description: "Automation 7,000+ integrations AI chatbots workflows", features: ["7,000+ apps", "Natural language", "AI chatbots", "Workflows"], pricing: "100 tasks/เดือน ฟรี / $20-400/เดือน", link: "https://zapier.com", type: "freemium", region: "global", hot: false },
+                    { name: "Make (Integromat)", description: "Visual automation platform ซับซ้อนกว่า Zapier", features: ["Visual builder", "1,500+ apps", "Complex flows", "Data transformation"], pricing: "1,000 ops/เดือน ฟรี / $9-29/เดือน", link: "https://make.com", type: "freemium", region: "global", hot: false },
+                    { name: "n8n", description: "Automation platform open source self-host ได้ Node-based", features: ["Open source", "Self-host", "400+ integrations", "Code nodes"], pricing: "🆓 ฟรี self-host / $20/เดือน cloud", link: "https://n8n.io", type: "freemium", region: "global", hot: true },
+                    { name: "Otter.ai", description: "ถอดความประชุมเรียลไทม์ สรุปด้วย AI action items", features: ["Real-time transcription", "AI summaries", "Zoom integration", "Action items"], pricing: "300 นาที/เดือน ฟรี / $17-30/เดือน", link: "https://otter.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Fireflies.ai", description: "บันทึกประชุม ถอดความ สรุป action items Slack", features: ["Meeting recorder", "Transcription", "AI summary", "CRM sync"], pricing: "800 นาที/เดือน ฟรี / $18-29/เดือน", link: "https://fireflies.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Fathom", description: "บันทึกประชุม Zoom ฟรีไม่จำกัด สรุป AI", features: ["Unlimited recording", "AI summary", "Zoom native", "CRM sync"], pricing: "🆓 ฟรี / $19-39/เดือน Pro", link: "https://fathom.video", type: "freemium", region: "global", hot: true },
+                    { name: "Motion", description: "AI calendar + task บริหารเวลาอัตโนมัติ planning", features: ["AI calendar", "Task scheduling", "Calendar management", "Project planning"], pricing: "7 วันทดลอง / $19-34/เดือน", link: "https://usemotion.com", type: "paid", region: "global", hot: false },
+                    { name: "Reclaim AI", description: "AI scheduling สร้าง time block ใน calendar อัตโนมัติ", features: ["Time blocking", "Task scheduling", "Habit scheduling", "Team sync"], pricing: "ฟรีจำกัด / $8-16/เดือน", link: "https://reclaim.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Notion AI", description: "Workspace + AI จัดการงาน จดบันทึก summarize", features: ["Workspace", "AI writing", "Q&A docs", "Collaboration"], pricing: "ฟรีพื้นฐาน / $10-15/เดือน", link: "https://notion.so", type: "freemium", region: "global", hot: false },
+                    { name: "Grammarly", description: "ตรวจแก้ไขภาษา เขียนได้ดีขึ้น ทุก platform", features: ["Grammar check", "Tone detector", "Clarity", "Writing assistant"], pricing: "ฟรีพื้นฐาน / $12/เดือน", link: "https://grammarly.com", type: "freemium", region: "global", hot: false },
+                    { name: "Mem", description: "Note-taking AI ที่จัดการตัวเอง ค้นหา context อัตโนมัติ", features: ["Self-organizing", "AI search", "Connections", "Capture anywhere"], pricing: "ฟรี / $14/เดือน Pro", link: "https://mem.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Superhuman", description: "Email client AI ตอบเร็ว AI triage inbox", features: ["AI email", "Keyboard shortcuts", "Split inbox", "AI summaries"], pricing: "$30/เดือน", link: "https://superhuman.com", type: "paid", region: "global", hot: false },
+                    { name: "SaneBox", description: "จัดการ email อัตโนมัติ AI กรอง important vs noise", features: ["Email filtering", "Snooze", "Black hole", "Daily digest"], pricing: "$7-36/เดือน", link: "https://sanebox.com", type: "paid", region: "global", hot: false },
+                    { name: "Taskade", description: "AI project management + mind map + chat ในที่เดียว", features: ["AI agents", "Mind maps", "Project templates", "Team chat"], pricing: "ฟรีพื้นฐาน / $8-19/เดือน", link: "https://taskade.com", type: "freemium", region: "global", hot: false },
+                    { name: "Guru", description: "Knowledge management AI ค้นหาข้อมูลองค์กร", features: ["Knowledge base", "AI search", "Slack integration", "Verification"], pricing: "ฟรี 3 users / $10-20/user", link: "https://getguru.com", type: "freemium", region: "global", hot: false },
+                    { name: "Lindy.ai", description: "สร้าง AI assistant personal workflow อัตโนมัติ", features: ["Personal AI", "Workflow automation", "Multiple integrations", "Email management"], pricing: "400 tasks/เดือน ฟรี / $49/เดือน", link: "https://lindy.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Relay.app", description: "Human-in-the-loop automation ผสม AI + human step", features: ["AI automation", "Human approval", "Collaborative", "No-code"], pricing: "200 runs/เดือน ฟรี / $9-149/เดือน", link: "https://relay.app", type: "freemium", region: "global", hot: false },
+                    { name: "Bardeen", description: "Automate browser tasks Chrome extension AI-powered", features: ["Browser automation", "Chrome extension", "Scraping", "CRM sync"], pricing: "ฟรีจำกัด / $10/เดือน", link: "https://bardeen.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Merlin AI", description: "Chrome extension AI ในทุกหน้าเว็บ summarize YouTube", features: ["Chrome extension", "YouTube summary", "Web AI", "ChatGPT integration"], pricing: "102 queries/เดือน ฟรี / $15/เดือน", link: "https://getmerlin.in", type: "freemium", region: "global", hot: false },
+                    { name: "Clockwise", description: "AI ปรับ calendar อัตโนมัติ protect focus time", features: ["Focus time", "Meeting scheduling", "Calendar optimization", "Team sync"], pricing: "ฟรีพื้นฐาน / $7-17/เดือน", link: "https://getclockwise.com", type: "freemium", region: "global", hot: false }
+                ]
+            },
+            "design": {
+                title: "ออกแบบและ UX",
+                icon: "🎨",
+                tools: [
+                    { name: "Figma AI", description: "Design tool ที่ดีที่สุด AI prototyping auto-layout", features: ["Auto-layout", "AI generation", "Prototyping", "Dev mode"], pricing: "ฟรีพื้นฐาน / $15-45/เดือน", link: "https://figma.com", type: "freemium", region: "global", hot: true },
+                    { name: "Adobe Firefly", description: "AI สร้างภาพปลอดภัยทางกฎหมายใน Creative Cloud", features: ["Photoshop AI", "Illustrator AI", "Commercial safe", "Gen Fill"], pricing: "25 credits ฟรี / $5/เดือน", link: "https://firefly.adobe.com", type: "freemium", region: "global", hot: false },
+                    { name: "Framer AI", description: "สร้างเว็บไซต์ด้วย AI ออกแบบและ publish ได้เลย", features: ["Website builder", "AI design", "CMS", "Animation"], pricing: "ฟรีพื้นฐาน / $5-30/เดือน", link: "https://framer.com", type: "freemium", region: "global", hot: true },
+                    { name: "Uizard", description: "แปลง wireframe sketch เป็น UI prototype AI", features: ["Sketch to UI", "Wireframe gen", "AI design", "Collaboration"], pricing: "2 projects ฟรี / $12-49/เดือน", link: "https://uizard.io", type: "freemium", region: "global", hot: false },
+                    { name: "Galileo AI", description: "Text to UI design สร้าง Figma design จาก prompt", features: ["Text to Figma", "Complex UI", "Design system", "Fast generation"], pricing: "Request access / $25-80/เดือน", link: "https://usegalileo.ai", type: "paid", region: "global", hot: false },
+                    { name: "Visily", description: "แปลง screenshot เป็น editable wireframe", features: ["Screenshot to wireframe", "AI design", "Templates", "Collaboration"], pricing: "ฟรีพื้นฐาน / $19/เดือน", link: "https://visily.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Locofy.ai", description: "แปลง Figma เป็นโค้ด React, Vue, Next.js production", features: ["Figma to code", "React/Vue/Next", "Production quality", "GitHub sync"], pricing: "1 project ฟรี / $19-49/เดือน", link: "https://locofy.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Khroma", description: "สร้าง color palette ด้วย AI เรียนรู้ preference", features: ["Color palette", "AI learning", "Accessibility check", "Export"], pricing: "🆓 ฟรี", link: "https://khroma.co", type: "free", region: "global", hot: false },
+                    { name: "Fontjoy", description: "จับคู่ font ด้วย AI สวยงาม harmony", features: ["Font pairing", "Deep learning", "Preview", "Free"], pricing: "🆓 ฟรี", link: "https://fontjoy.com", type: "free", region: "global", hot: false },
+                    { name: "Creatie", description: "AI UX design platform สร้าง design system อัตโนมัติ", features: ["Design system", "AI generation", "Components", "Collaboration"], pricing: "ฟรีจำกัด / $15-30/เดือน", link: "https://creatie.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Relume AI", description: "สร้าง website sitemap wireframe ด้วย AI", features: ["Sitemap gen", "Wireframe", "Figma export", "Component library"], pricing: "ฟรี / $36-47/เดือน", link: "https://relume.io", type: "freemium", region: "global", hot: false },
+                    { name: "Pendo", description: "Product analytics AI insights user experience", features: ["Product analytics", "In-app guides", "AI insights", "Roadmap"], pricing: "Free trial / Enterprise", link: "https://pendo.io", type: "freemium", region: "global", hot: false },
+                    { name: "Hotjar AI", description: "Heatmaps session recordings AI insights UX", features: ["Heatmaps", "Session recording", "AI summaries", "Feedback"], pricing: "35 sessions/วัน ฟรี / $32-80/เดือน", link: "https://hotjar.com", type: "freemium", region: "global", hot: false }
+                ]
+            },
+            "marketing": {
+                title: "การตลาดและ SEO",
+                icon: "📣",
+                tools: [
+                    { name: "SEMrush AI", description: "SEO competitor research keyword AI writing", features: ["SEO audit", "Keyword research", "AI writing", "Competitor analysis"], pricing: "10 requests/วัน ฟรี / $130-500/เดือน", link: "https://semrush.com", type: "freemium", region: "global", hot: false },
+                    { name: "Surfer SEO", description: "SEO content optimizer AI เขียนเนื้อหาที่ rank", features: ["Content scoring", "SERP analysis", "AI editor", "Keyword density"], pricing: "$89-250/เดือน", link: "https://surferseo.com", type: "paid", region: "global", hot: false },
+                    { name: "MarketMuse", description: "AI content strategy วางแผน SEO ระยะยาว", features: ["Content strategy", "Topic clusters", "AI brief", "Competitive analysis"], pricing: "10 queries/เดือน ฟรี / $149-399/เดือน", link: "https://marketmuse.com", type: "freemium", region: "global", hot: false },
+                    { name: "Jasper", description: "เขียน marketing copy AI หลากหลาย template ทีม", features: ["Marketing copy", "Brand voice", "Templates", "Team collaboration"], pricing: "$49-125/เดือน", link: "https://jasper.ai", type: "paid", region: "global", hot: false },
+                    { name: "Copy.ai", description: "เขียน copy โฆษณา Social email AI workflows", features: ["Ad copy", "Social media", "Email marketing", "Workflows"], pricing: "2,000 words ฟรี / $36-186/เดือน", link: "https://copy.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Persado", description: "AI language optimization A/B test ข้อความ ROI", features: ["Language optimization", "A/B testing", "Emotional targeting", "Enterprise"], pricing: "Enterprise", link: "https://persado.com", type: "paid", region: "global", hot: false },
+                    { name: "Phrasee", description: "AI เขียน subject line email ที่เพิ่ม open rate", features: ["Email subject line", "A/B testing", "Brand voice", "Analytics"], pricing: "Enterprise", link: "https://phrasee.co", type: "paid", region: "global", hot: false },
+                    { name: "HubSpot AI", description: "CRM ครบครัน AI content email marketing", features: ["CRM", "Email AI", "Content AI", "SEO suggestions"], pricing: "ฟรีพื้นฐาน / $45-3,600/เดือน", link: "https://hubspot.com", type: "freemium", region: "global", hot: false },
+                    { name: "Zapier AI", description: "Automation 7,000+ integrations สำหรับ marketing", features: ["Marketing automation", "Lead nurturing", "Multi-channel", "Analytics"], pricing: "100 tasks/เดือน ฟรี / $20/เดือน", link: "https://zapier.com", type: "freemium", region: "global", hot: false },
+                    { name: "Buffer AI", description: "โพสต์ Social media AI caption scheduling", features: ["AI captions", "Multi-platform", "Scheduling", "Analytics"], pricing: "3 channels ฟรี / $6-120/เดือน", link: "https://buffer.com", type: "freemium", region: "global", hot: false },
+                    { name: "Hootsuite AI", description: "Social media management AI content creation", features: ["AI writing", "Scheduling", "Analytics", "Multiple platforms"], pricing: "30 วันทดลอง / $99/เดือน", link: "https://hootsuite.com", type: "paid", region: "global", hot: false },
+                    { name: "Brandwatch", description: "Social listening AI sentiment analysis", features: ["Social listening", "Sentiment AI", "Trend detection", "Reports"], pricing: "Enterprise", link: "https://brandwatch.com", type: "paid", region: "global", hot: false },
+                    { name: "Typeface", description: "AI สร้าง on-brand content สำหรับ enterprise", features: ["Brand content", "Multi-format", "Team workflow", "Enterprise"], pricing: "Enterprise", link: "https://typeface.ai", type: "paid", region: "global", hot: false },
+                    { name: "Adcreative.ai", description: "สร้างโฆษณา Facebook Google Ads ด้วย AI", features: ["Ad creative", "Multiple formats", "A/B testing", "Performance score"], pricing: "7 วันทดลอง / $29-299/เดือน", link: "https://adcreative.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Albert.ai", description: "AI ปรับ digital advertising campaign อัตโนมัติ", features: ["Campaign optimization", "Multi-channel", "Autonomous AI", "Enterprise"], pricing: "Enterprise", link: "https://albert.ai", type: "paid", region: "global", hot: false }
+                ]
+            },
+            "business": {
+                title: "ธุรกิจและ Enterprise",
+                icon: "🏢",
+                tools: [
+                    { name: "Microsoft Copilot for M365", description: "AI ใน Word, Excel, PowerPoint, Teams, Outlook", features: ["Office integration", "GPT-4o", "Drafting", "Data analysis"], pricing: "$30/user/เดือน", link: "https://microsoft.com/copilot", type: "paid", region: "global", hot: true },
+                    { name: "Google Workspace AI", description: "AI ใน Docs, Sheets, Slides, Gmail, Meet Gemini", features: ["Gemini in Workspace", "Drafting", "Summarize", "Data analysis"], pricing: "$20-30/user/เดือน", link: "https://workspace.google.com", type: "paid", region: "global", hot: false },
+                    { name: "Salesforce Einstein", description: "AI CRM วิเคราะห์ลูกค้า ทำนาย opportunity", features: ["CRM AI", "Lead scoring", "Forecast", "Auto-insights"], pricing: "มีใน Salesforce plans", link: "https://salesforce.com/einstein", type: "paid", region: "global", hot: false },
+                    { name: "ServiceNow AI", description: "ITSM AI ช่วย IT service management อัตโนมัติ", features: ["ITSM automation", "Incident resolution", "Knowledge AI", "Workflow"], pricing: "Enterprise", link: "https://servicenow.com", type: "paid", region: "global", hot: false },
+                    { name: "UiPath", description: "RPA + AI automation บอท process automation", features: ["RPA bots", "AI vision", "Process mining", "Enterprise"], pricing: "60 วันทดลอง / Enterprise", link: "https://uipath.com", type: "freemium", region: "global", hot: false },
+                    { name: "Blue Prism", description: "Enterprise RPA platform automation บริษัทใหญ่", features: ["Enterprise RPA", "AI decisions", "Audit trail", "Multi-cloud"], pricing: "Enterprise", link: "https://blueprism.com", type: "paid", region: "global", hot: false },
+                    { name: "Automation Anywhere", description: "Cloud-native RPA AI-powered bots 320+ integrations", features: ["Cloud RPA", "AI bots", "Document AI", "Analytics"], pricing: "Community ฟรี / Enterprise", link: "https://automationanywhere.com", type: "freemium", region: "global", hot: false },
+                    { name: "Veritone", description: "AI platform for media law enforcement analytics", features: ["Media AI", "Facial recognition", "Evidence management", "Analytics"], pricing: "Enterprise", link: "https://veritone.com", type: "paid", region: "global", hot: false },
+                    { name: "IBM Watson", description: "Enterprise AI NLP data analysis cloud services", features: ["NLP", "Data analysis", "Cloud AI", "Industry solutions"], pricing: "มีแผนฟรี / Pay-per-use", link: "https://ibm.com/watson", type: "freemium", region: "global", hot: false },
+                    { name: "AWS AI Services", description: "Cloud AI Amazon Rekognition Comprehend Textract", features: ["Image recognition", "NLP", "OCR", "Forecasting"], pricing: "Free tier / Pay-per-use", link: "https://aws.amazon.com/machine-learning", type: "freemium", region: "global", hot: false },
+                    { name: "Google Cloud AI", description: "Cloud AI Vertex AI Vision Language Translation", features: ["Vertex AI", "Vision API", "Translation", "AutoML"], pricing: "Free tier / Pay-per-use", link: "https://cloud.google.com/ai", type: "freemium", region: "global", hot: false },
+                    { name: "Azure AI", description: "Microsoft Cloud AI Cognitive Services OpenAI", features: ["Azure OpenAI", "Cognitive Services", "ML Studio", "Bot Service"], pricing: "Free tier / Pay-per-use", link: "https://azure.microsoft.com/ai", type: "freemium", region: "global", hot: false },
+                    { name: "Glean", description: "Enterprise search AI ค้นหาข้อมูลองค์กรทั้งหมด", features: ["Enterprise search", "All-app search", "AI assistant", "Knowledge graph"], pricing: "Enterprise", link: "https://glean.com", type: "paid", region: "global", hot: false },
+                    { name: "Moveworks", description: "AI ช่วย IT helpdesk HR support อัตโนมัติ", features: ["IT automation", "HR support", "Multi-language", "Enterprise"], pricing: "Enterprise", link: "https://moveworks.com", type: "paid", region: "global", hot: false },
+                    { name: "Writer", description: "Enterprise AI สร้าง content brand-consistent ปลอดภัย", features: ["Brand voice", "Content policies", "Enterprise security", "API"], pricing: "$18-26/user", link: "https://writer.com", type: "paid", region: "global", hot: false }
+                ]
+            },
+            "education": {
+                title: "การศึกษาและเรียนรู้",
+                icon: "📚",
+                tools: [
+                    { name: "Khan Academy Khanmigo", description: "AI tutor จาก Khan Academy สอนคณิต วิทย์ โค้ด", features: ["AI tutor", "Math", "Science", "Coding", "Free education"], pricing: "$9/เดือน (ครู/นักเรียนฟรี)", link: "https://khanacademy.org", type: "freemium", region: "global", hot: false },
+                    { name: "Duolingo Max", description: "เรียนภาษา AI อธิบาย roleplay กับ AI", features: ["Language learning", "AI roleplay", "Explain answers", "Gamification"], pricing: "ฟรีพื้นฐาน / $14/เดือน Super", link: "https://duolingo.com", type: "freemium", region: "global", hot: false },
+                    { name: "Quizlet AI", description: "Flashcard + AI Q-Chat ช่วยจำ study", features: ["Flashcards", "AI tutor", "Practice tests", "Q-Chat"], pricing: "ฟรีพื้นฐาน / $7/เดือน Plus", link: "https://quizlet.com", type: "freemium", region: "global", hot: false },
+                    { name: "Photomath", description: "ถ่ายรูปโจทย์คณิตศาสตร์ AI อธิบายทีละขั้น", features: ["Math solver", "Step-by-step", "Camera scan", "Multiple methods"], pricing: "ฟรีพื้นฐาน / $10/เดือน Plus", link: "https://photomath.com", type: "freemium", region: "global", hot: false },
+                    { name: "Wolfram Alpha", description: "Computational knowledge engine คณิตศาสตร์ วิทย์", features: ["Computational answers", "Math", "Science", "Data"], pricing: "ฟรีพื้นฐาน / $7-12/เดือน Pro", link: "https://wolframalpha.com", type: "freemium", region: "global", hot: false },
+                    { name: "Socratic by Google", description: "AI ช่วยทำการบ้าน อธิบาย step-by-step ฟรี", features: ["Homework help", "Step-by-step", "Multiple subjects", "Free"], pricing: "🆓 ฟรี", link: "https://socratic.org", type: "free", region: "global", hot: false },
+                    { name: "Consensus", description: "ค้นหางานวิจัยวิทยาศาสตร์ AI สรุปผลวิจัย", features: ["Scientific papers", "Evidence-based", "AI summaries", "Academic"], pricing: "20 searches/เดือน ฟรี / $9-25/เดือน", link: "https://consensus.app", type: "freemium", region: "global", hot: false },
+                    { name: "Coursera AI", description: "เรียน online courses AI ML data science", features: ["AI courses", "ML courses", "Certificates", "Guided projects"], pricing: "ฟรีบางส่วน / $49/เดือน", link: "https://coursera.org", type: "freemium", region: "global", hot: false },
+                    { name: "DataCamp AI", description: "เรียน data science AI Python R SQL coding", features: ["Data science", "AI coding", "Projects", "Certification"], pricing: "ฟรีบางส่วน / $25/เดือน", link: "https://datacamp.com", type: "freemium", region: "global", hot: false },
+                    { name: "Elsa Speak", description: "ฝึกออกเสียงภาษาอังกฤษด้วย AI real-time feedback", features: ["Pronunciation AI", "Real-time feedback", "Accent training", "Speaking coach"], pricing: "ฟรีจำกัด / $7-12/เดือน", link: "https://elsaspeak.com", type: "freemium", region: "global", hot: false },
+                    { name: "Speak", description: "เรียนพูดภาษา AI conversation partner", features: ["AI conversation", "Speaking practice", "Real scenarios", "Instant feedback"], pricing: "7 วันทดลอง / $8-25/เดือน", link: "https://speak.com", type: "freemium", region: "global", hot: false },
+                    { name: "Brilliant", description: "เรียนคณิตวิทย์ CS แบบ interactive problem solving", features: ["Interactive learning", "Math", "CS", "Problem solving"], pricing: "ฟรีจำกัด / $15-25/เดือน", link: "https://brilliant.org", type: "freemium", region: "global", hot: false },
+                    { name: "Explainpaper", description: "อัปโหลด paper AI อธิบาย term ยากๆ ให้เข้าใจ", features: ["Paper explanation", "Highlight & explain", "Student-friendly", "STEM"], pricing: "มีฟรี / $12/เดือน", link: "https://explainpaper.com", type: "freemium", region: "global", hot: false },
+                    { name: "Mindsmith", description: "สร้าง microlearning course AI ในนาทีเดียว", features: ["AI course builder", "Microlearning", "SCORM export", "LMS integration"], pricing: "3 ชิ้น/เดือน ฟรี / $49/เดือน", link: "https://mindsmith.ai", type: "freemium", region: "global", hot: false }
+                ]
+            },
+            "health": {
+                title: "สุขภาพและชีวิต",
+                icon: "❤️",
+                tools: [
+                    { name: "Ada Health", description: "AI วินิจฉัยอาการเบื้องต้น บันทึก symptoms", features: ["Symptom checker", "Health assessment", "Doctor referral", "Multilingual"], pricing: "🆓 ฟรี", link: "https://ada.com", type: "free", region: "global", hot: false },
+                    { name: "Woebot", description: "AI chatbot สุขภาพจิต CBT therapy evidence-based", features: ["CBT therapy", "Mood tracking", "Crisis support", "Research-based"], pricing: "🆓 ฟรี", link: "https://woebothealth.com", type: "free", region: "global", hot: false },
+                    { name: "Noom AI", description: "AI program ลดน้ำหนัก psychology-based", features: ["Weight loss", "Behavior change", "Food tracking", "Coach"], pricing: "14 วันทดลอง / $60-80/เดือน", link: "https://noom.com", type: "paid", region: "global", hot: false },
+                    { name: "Whoop AI", description: "Wearable + AI recovery sleep strain insights", features: ["Recovery score", "Sleep analysis", "Strain monitor", "Health AI"], pricing: "$18-30/เดือน + hardware", link: "https://whoop.com", type: "paid", region: "global", hot: false },
+                    { name: "Youper", description: "AI ช่วยเรื่อง anxiety depression mood tracker", features: ["Mood tracking", "CBT exercises", "Anxiety management", "Insights"], pricing: "ฟรีพื้นฐาน / $10/เดือน", link: "https://youper.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Spring Health", description: "AI mental health platform สำหรับองค์กร", features: ["Mental health AI", "Therapist matching", "Employee benefits", "Analytics"], pricing: "Enterprise B2B", link: "https://springhealth.com", type: "paid", region: "global", hot: false },
+                    { name: "Babylon Health", description: "AI ด้านสุขภาพ consultation symptoms checker", features: ["AI consultation", "Symptom assessment", "GP booking", "Health monitoring"], pricing: "ขึ้นกับประกัน / มีฟรี", link: "https://babylonhealth.com", type: "freemium", region: "global", hot: false },
+                    { name: "AI Dermatologist", description: "ถ่ายรูปผิวหนัง AI วิเคราะห์ mole skin conditions", features: ["Skin analysis", "Mole detection", "Rash identification", "Dermatology AI"], pricing: "ฟรีจำกัด / มี Pro", link: "https://ai-derm.com", type: "freemium", region: "global", hot: false },
+                    { name: "Lark Health", description: "AI coaching เบาหวาน ความดัน โรคเรื้อรัง", features: ["Chronic disease", "AI coaching", "Behavior change", "Real-time feedback"], pricing: "มีผ่านประกัน / Direct", link: "https://lark.com", type: "freemium", region: "global", hot: false },
+                    { name: "Anthropic Claude (Health)", description: "สอบถามข้อมูลสุขภาพ เข้าใจเอกสารการแพทย์", features: ["Health Q&A", "Medical document", "Nutrition advice", "Symptom information"], pricing: "ฟรี / $20/เดือน", link: "https://claude.ai", type: "freemium", region: "global", hot: false }
+                ]
+            },
+            "finance": {
+                title: "การเงินและการลงทุน",
+                icon: "💰",
+                tools: [
+                    { name: "Bloomberg GPT", description: "AI สำหรับ financial news analysis เฉพาะ finance", features: ["Financial NLP", "News analysis", "Market data", "Bloomberg terminal"], pricing: "Bloomberg subscription", link: "https://bloomberg.com", type: "paid", region: "global", hot: false },
+                    { name: "Kensho (S&P Global)", description: "AI data analytics สำหรับ financial markets", features: ["Market analytics", "NLP", "Event detection", "Data extraction"], pricing: "Enterprise", link: "https://kensho.com", type: "paid", region: "global", hot: false },
+                    { name: "Alphasense", description: "AI search financial documents earnings calls", features: ["Document search", "Earnings calls", "Smart summaries", "Market intel"], pricing: "Enterprise", link: "https://alpha-sense.com", type: "paid", region: "global", hot: false },
+                    { name: "Firefly (Anthropic) Finance", description: "วิเคราะห์ financial reports ด้วย Claude AI", features: ["Report analysis", "Data extraction", "Q&A", "Long context"], pricing: "ฟรี / $20/เดือน", link: "https://claude.ai", type: "freemium", region: "global", hot: false },
+                    { name: "FDIC AI Tools", description: "AI วิเคราะห์ compliance banking regulations", features: ["Compliance", "Risk analysis", "Banking AI", "Regulatory"], pricing: "Enterprise", link: "https://fdic.gov", type: "paid", region: "global", hot: false },
+                    { name: "Zest AI", description: "AI underwriting credit decisions ลด bias", features: ["Credit scoring", "Underwriting AI", "Bias reduction", "Explainable AI"], pricing: "Enterprise", link: "https://zest.ai", type: "paid", region: "global", hot: false },
+                    { name: "Numerai", description: "Crowdsourced AI hedge fund ML model tournament", features: ["AI hedge fund", "ML competition", "Crypto staking", "Global models"], pricing: "ฟรีเข้าร่วม / Stake NMR", link: "https://numer.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Kavout", description: "AI stock screening portfolio optimization", features: ["Stock screening", "AI ranking", "Portfolio builder", "Market signals"], pricing: "Free trial / $59/เดือน", link: "https://kavout.com", type: "freemium", region: "global", hot: false },
+                    { name: "TradingView AI", description: "Charting platform AI indicators Pine Script", features: ["AI indicators", "Chart analysis", "Alerts", "Pine Script"], pricing: "ฟรีพื้นฐาน / $15-60/เดือน", link: "https://tradingview.com", type: "freemium", region: "global", hot: false },
+                    { name: "Finchat", description: "Chat กับ financial data statements วิเคราะห์", features: ["Financial chat", "Company data", "Earnings", "Visualizations"], pricing: "ฟรีจำกัด / $29-99/เดือน", link: "https://finchat.io", type: "freemium", region: "global", hot: false }
+                ]
+            },
+            "3d_ar": {
+                title: "3D, AR และ Spatial",
+                icon: "🌐",
+                tools: [
+                    { name: "Luma AI (Genie)", description: "สร้าง 3D object จาก text หรือภาพ NeRF", features: ["Text to 3D", "NeRF capture", "Gaussian splatting", "Export 3D"], pricing: "ฟรีจำกัด / $30/เดือน", link: "https://lumalabs.ai", type: "freemium", region: "global", hot: true },
+                    { name: "Meshy.ai", description: "Text to 3D AI 3D model generation สำหรับ game", features: ["Text to 3D", "Image to 3D", "Texture gen", "Game assets"], pricing: "200 credits/เดือน ฟรี / $20-80/เดือน", link: "https://meshy.ai", type: "freemium", region: "global", hot: true },
+                    { name: "Spline AI", description: "3D design tool browser-based AI generation", features: ["Browser 3D", "AI generation", "Interactive", "Export"], pricing: "ฟรีพื้นฐาน / $9-49/เดือน", link: "https://spline.design", type: "freemium", region: "global", hot: false },
+                    { name: "CSM.ai (Common Sense Machines)", description: "แปลงภาพ/วิดีโอเป็น 3D world", features: ["Image to 3D", "Video to 3D", "Game engine export", "NeRF"], pricing: "Free beta / มี Pro", link: "https://csm.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Kaedim", description: "แปลง 2D concept art เป็น 3D model game-ready", features: ["2D to 3D", "Game ready", "Texture", "Animation rig"], pricing: "Enterprise / $40/เดือน", link: "https://kaedim3d.com", type: "freemium", region: "global", hot: false },
+                    { name: "Shapegpt", description: "Text to 3D shape ด้วย AI promptable 3D", features: ["Text to 3D", "Shape generation", "Export OBJ", "Fast"], pricing: "ฟรีจำกัด / มี Pro", link: "https://shapegpt.com", type: "freemium", region: "global", hot: false },
+                    { name: "Polycam", description: "ถ่าย 3D scan ด้วยมือถือ LiDAR AI NeRF", features: ["LiDAR scan", "3D capture", "NeRF", "Export to Figma/Blender"], pricing: "3 scans/เดือน ฟรี / $15/เดือน", link: "https://poly.cam", type: "freemium", region: "global", hot: false },
+                    { name: "Scenario.gg", description: "สร้าง AI game assets consistent style", features: ["Game assets", "Consistent style", "Fine-tuning", "Texture gen"], pricing: "ฟรีจำกัด / $15/เดือน", link: "https://scenario.gg", type: "freemium", region: "global", hot: false },
+                    { name: "Wonder Studio", description: "แทน CG character ในฉากจริงด้วย AI อัตโนมัติ", features: ["CG to live action", "Auto animation", "Multiple characters", "VFX"], pricing: "Free projects / $50/เดือน", link: "https://wonderdynamics.com", type: "freemium", region: "global", hot: false },
+                    { name: "Meta Spark", description: "สร้าง AR filter สำหรับ Instagram Facebook", features: ["AR filters", "Face tracking", "World effects", "Instagram/FB"], pricing: "🆓 ฟรี", link: "https://sparkar.facebook.com", type: "free", region: "global", hot: false }
+                ]
+            },
+            "agent": {
+                title: "AI Agents และ Automation",
+                icon: "🤖",
+                tools: [
+                    { name: "AutoGPT", description: "AI agent ทำงานอัตโนมัติ open source ชื่อดัง", features: ["Autonomous tasks", "Web search", "File operations", "Plugin system"], pricing: "🆓 ฟรี (self-hosted)", link: "https://autogpt.net", type: "free", region: "global", hot: false },
+                    { name: "AgentGPT", description: "AI agent ใน browser ไม่ต้องติดตั้ง", features: ["Browser-based", "Goal-oriented", "Web search", "Task planning"], pricing: "มีฟรี / $40/เดือน", link: "https://agentgpt.reworkd.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Claude Computer Use", description: "⚡ Claude ควบคุมคอมพิวเตอร์ได้ คลิก พิมพ์ ทำงานแทน", features: ["Computer control", "Browser automation", "File management", "Code execution"], pricing: "API pricing", link: "https://anthropic.com", type: "paid", region: "global", hot: true },
+                    { name: "OpenAI Operator", description: "⚡ AI agent เว็บ ทำงานออนไลน์แทน book ซื้อของ", features: ["Web tasks", "Shopping", "Booking", "Form filling"], pricing: "$20/เดือน (Pro)", link: "https://openai.com/operator", type: "paid", region: "global", hot: true },
+                    { name: "Devin", description: "AI Software Engineer ทำโปรเจค GitHub คนเดียว", features: ["Autonomous coding", "GitHub integration", "Bug fixes", "Feature dev"], pricing: "$500/เดือน", link: "https://cognition.ai", type: "paid", region: "global", hot: false },
+                    { name: "LangChain", description: "Framework สร้าง LLM apps agents tools", features: ["Framework", "Agent tools", "RAG", "Multiple LLMs"], pricing: "🆓 ฟรี open source", link: "https://langchain.com", type: "free", region: "global", hot: false },
+                    { name: "CrewAI", description: "Framework multi-agent collaboration ทำงานเป็นทีม", features: ["Multi-agent", "Team collaboration", "Role-based", "Python"], pricing: "🆓 ฟรี open source", link: "https://crewai.com", type: "free", region: "global", hot: true },
+                    { name: "Microsoft Autogen", description: "Multi-agent conversation framework จาก Microsoft", features: ["Multi-agent", "Code execution", "Human-in-loop", "Enterprise"], pricing: "🆓 ฟรี open source", link: "https://microsoft.github.io/autogen", type: "free", region: "global", hot: false },
+                    { name: "Flowise", description: "สร้าง LLM apps visual drag-and-drop no-code", features: ["No-code", "Visual builder", "RAG", "Multiple LLMs"], pricing: "🆓 ฟรี self-host / $35/เดือน cloud", link: "https://flowiseai.com", type: "freemium", region: "global", hot: false },
+                    { name: "Dify", description: "Platform พัฒนา LLM apps + agent open source", features: ["LLM apps", "RAG", "Agent tools", "API deployment"], pricing: "🆓 ฟรี self-host / $59/เดือน cloud", link: "https://dify.ai", type: "freemium", region: "global", hot: true },
+                    { name: "Relevance AI", description: "สร้าง AI workers agents สำหรับทีม no-code", features: ["AI workers", "Task automation", "Tool building", "Team AI"], pricing: "100 credits/วัน ฟรี / $19/เดือน", link: "https://relevanceai.com", type: "freemium", region: "global", hot: false },
+                    { name: "MultiOn", description: "Personal AI agent ทำงานเว็บแทนตั้งแต่ต้นจนจบ", features: ["Web automation", "Shopping", "Research", "Email"], pricing: "100 tasks/เดือน ฟรี / $25/เดือน", link: "https://multion.ai", type: "freemium", region: "global", hot: false },
+                    { name: "GPT-4o with tools", description: "OpenAI function calling web search code interpreter", features: ["Function calling", "Web search", "Code interpreter", "File analysis"], pricing: "$20/เดือน (Plus)", link: "https://chatgpt.com", type: "paid", region: "global", hot: false },
+                    { name: "Vertex AI Agent Builder", description: "Google Cloud สร้าง AI agent enterprise-grade", features: ["Enterprise agent", "RAG", "Search grounding", "GCP integration"], pricing: "Pay-per-use GCP", link: "https://cloud.google.com/vertex-ai", type: "freemium", region: "global", hot: false },
+                    { name: "Stack AI", description: "No-code LLM workflow builder enterprise RAG", features: ["No-code AI", "RAG pipelines", "Enterprise deploy", "100+ integrations"], pricing: "ฟรีจำกัด / $199/เดือน", link: "https://stack-ai.com", type: "freemium", region: "global", hot: false },
+                    { name: "SuperAGI", description: "Open source agent framework AI goals actions", features: ["Open source", "Goal-based", "Tool plugins", "Self-hosted"], pricing: "🆓 ฟรี self-host", link: "https://superagi.com", type: "free", region: "global", hot: false },
+                    { name: "BabyAGI", description: "AI task management agent loop ฟรี open source", features: ["Task management", "AI loop", "Prioritization", "Open source"], pricing: "🆓 ฟรี", link: "https://github.com/yoheinakajima/babyagi", type: "free", region: "global", hot: false },
+                    { name: "GPT Engineer", description: "สร้างทั้ง codebase จาก prompt ภาษาธรรมดา", features: ["Code generation", "Full project", "Open source", "AI engineer"], pricing: "🆓 ฟรี open source", link: "https://gptengineer.app", type: "free", region: "global", hot: false },
+                    { name: "OpenAgents", description: "Platform AI agents เว็บ ข้อมูล plugin", features: ["Web agent", "Data agent", "Plugin system", "Open source"], pricing: "🆓 ฟรี open source", link: "https://github.com/xlang-ai/OpenAgents", type: "free", region: "global", hot: false },
+                    { name: "AgentRunner.ai", description: "สร้างและรัน AI agents แบบ no-code", features: ["No-code agents", "Task automation", "API tools", "Monitoring"], pricing: "ฟรีจำกัด / $29/เดือน", link: "https://agentrunner.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Fixie.ai", description: "Platform สร้าง AI agent apps ด้วย natural language", features: ["Agent apps", "Natural language", "Tool integration", "Deploy"], pricing: "ฟรีจำกัด / มี Pro", link: "https://fixie.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Beam AI", description: "AI agents สำหรับ enterprise task automation workflows", features: ["Enterprise agents", "Workflow automation", "Integration", "Analytics"], pricing: "Enterprise", link: "https://beam.ai", type: "paid", region: "global", hot: false },
+                    { name: "Zapier Central", description: "AI agents ใน Zapier บอทอัตโนมัติตอบสนอง", features: ["AI bots", "Behavior triggers", "Multi-app", "Real-time"], pricing: "Early access / มีฟรี", link: "https://zapier.com/central", type: "freemium", region: "global", hot: false },
+                    { name: "Taskus AI", description: "BPO + AI content moderation data annotation", features: ["Content moderation", "Data annotation", "AI trust safety", "CX AI"], pricing: "Enterprise", link: "https://taskus.com", type: "paid", region: "global", hot: false },
+                    { name: "Cognosys", description: "AI agent research analysis produce deliverables", features: ["Research agent", "Analysis", "Document generation", "Planning"], pricing: "10 tasks ฟรี / $10-50/เดือน", link: "https://cognosys.ai", type: "freemium", region: "global", hot: false },
+                    { name: "Adala", description: "Autonomous data labeling agent framework", features: ["Data labeling", "Autonomous", "Open source", "LLM-based"], pricing: "🆓 ฟรี open source", link: "https://github.com/HumanSignal/Adala", type: "free", region: "global", hot: false },
+                    { name: "E2B", description: "Sandbox รัน AI code อัตโนมัติ cloud secure", features: ["Code sandboxing", "AI execution", "Secure cloud", "SDK"], pricing: "ฟรีจำกัด / $20/เดือน", link: "https://e2b.dev", type: "freemium", region: "global", hot: false },
+                    { name: "Dust", description: "Platform สร้าง custom AI assistants สำหรับทีม", features: ["Custom assistants", "Company knowledge", "Slack integration", "Team AI"], pricing: "29€/seat/เดือน", link: "https://dust.tt", type: "paid", region: "global", hot: false },
+                    { name: "Wordware", description: "Build AI programs ด้วย natural language no-code", features: ["Natural language programming", "AI workflows", "Team collaboration", "Deploy"], pricing: "ฟรีจำกัด / $29/เดือน", link: "https://wordware.ai", type: "freemium", region: "global", hot: false }
                 ]
             }
         };
